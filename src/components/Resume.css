@@ -1,0 +1,10 @@
+img{
+    /* width: 80vw; */
+    max-width: 60%;
+    max-height: 60%;
+    /* height: 80vh; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-position: center;
+}

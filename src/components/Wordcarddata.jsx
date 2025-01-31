@@ -215,6 +215,14 @@ const Wordcarddata = [
     info: "This is my Internship project.",
     viewLink: "https://weather-react-rose-delta.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/resu",
+  },
+  {
+    id: 25,
+    imgsrc: bgchanger,
+    title: "Background Changer",
+    info: "This Website is my simple javascript lerning project.",
+    viewLink: "https://bgchanger-mauve.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/bgchanger",
   }
 ];
 

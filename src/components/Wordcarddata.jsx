@@ -25,6 +25,10 @@ import hashtag from "../assets/hashtag.png"
 import weatherreact from "../assets/weather-react.png"
 import bgchanger from "../assets/bgchanger.png"
 import galleryreact from "../assets/gallery-react.png"
+import netflixclone from "../assets/netflix-clone.png"
+
+
+
 const Wordcarddata = [
   {
     id: 1,
@@ -233,6 +237,13 @@ const Wordcarddata = [
     info: "This Website is my React Practice project.",
     viewLink: "https://gallery-react-five.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/gallery-react",
+  },{
+    id: 27,
+    imgsrc: netflixclone,
+    title: "Netflix Clone",
+    info: "This Website is my React Practice project.",
+    viewLink: "https://hhhhvhnbnvh.netlify.app/",
+    sourceLink: "https://github.com/mohitsbh/netflix-clone",
   }
 ];
 

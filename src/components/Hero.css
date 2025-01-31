@@ -137,19 +137,19 @@
 
 @media screen and (max-width: 480px) {
   .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero-description {
     font-size: 1rem;
   }
 
+  .hero-subtitle {
+    font-size: .7rem;
+  }
+
+  .hero-description {
+    font-size: .5rem;
+  }
+
   .hero .buttons .btn {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.5rem 1.4rem;
   }
 }

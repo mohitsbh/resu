@@ -22,6 +22,7 @@ import analogclock from "../assets/analogclock.png"
 import solar from "../assets/solar.png"
 import eventcal from "../assets/eventcal.png"
 import hashtag from "../assets/hashtag.png"
+import weatherreact from "../assets/weather-react.png"
 const Wordcarddata = [
   {
     id: 1,
@@ -207,6 +208,13 @@ const Wordcarddata = [
     info: "This is my Internship project.",
     viewLink: "https://github.com/user-attachments/assets/30771072-9a3e-4c59-b4cd-74d3af699691",
     sourceLink: "https://github.com/mohitsbh/hashtag_gen",
+  }, {
+    id: 24,
+    imgsrc: weatherreact,
+    title: "Weather Forecast",
+    info: "This is my Internship project.",
+    viewLink: "https://weather-react-rose-delta.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/resu",
   }
 ];
 

@@ -23,6 +23,7 @@ import solar from "../assets/solar.png"
 import eventcal from "../assets/eventcal.png"
 import hashtag from "../assets/hashtag.png"
 import weatherreact from "../assets/weather-react.png"
+import bgchanger from "../assets/bgchanger.png"
 const Wordcarddata = [
   {
     id: 1,

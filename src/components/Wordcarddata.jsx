@@ -24,6 +24,7 @@ import eventcal from "../assets/eventcal.png"
 import hashtag from "../assets/hashtag.png"
 import weatherreact from "../assets/weather-react.png"
 import bgchanger from "../assets/bgchanger.png"
+import galleryreact from "../assets/gallery-react.png"
 const Wordcarddata = [
   {
     id: 1,
@@ -224,6 +225,14 @@ const Wordcarddata = [
     info: "This Website is my simple javascript lerning project.",
     viewLink: "https://bgchanger-mauve.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/bgchanger",
+  },
+  {
+    id: 26,
+    imgsrc: galleryreact,
+    title: "Image Gallery",
+    info: "This Website is my React Practice project.",
+    viewLink: "https://gallery-react-five.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/gallery-react",
   }
 ];
 

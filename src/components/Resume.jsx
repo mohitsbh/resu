@@ -1,6 +1,6 @@
 import React from "react";
 import resumeImage from "../assets/resume.jpg";
-// import resumePdf from "../documents/mohit_resume.pdf";
+import resumePdf from "../documents/mohit_resume.pdf";
 import "./Resume.css";
 
 const Resume = () => {

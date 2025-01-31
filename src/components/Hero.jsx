@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
-import './Hero.css';  // Import the custom CSS file
+import "./Hero.css"; // Import the updated CSS file
 
 const Hero = () => {
   return (
@@ -10,15 +10,16 @@ const Hero = () => {
       <div className="mask"></div>
 
       {/* Content */}
-      <div className="content" style={{color:'#fff'}}>
-        <Typography variant="h1" component="h1" className="hero-title" sx={{color:'white'}}>
+      <div className="content">
+        <Typography variant="h1" className="hero-title">
           Hi, I'm <span className="highlight">Mohit Bhosale</span> 👋
         </Typography>
-        <Typography variant="h5" className="hero-subtitle" sx={{color:"white"}}>
+        <Typography variant="h5" className="hero-subtitle">
           🚀 AI & Data Science Enthusiast | Software & Web Developer
         </Typography>
         <Typography className="hero-description">
-          Passionate about building intelligent solutions, crafting seamless web experiences, and solving real-world problems through technology.
+          Passionate about building intelligent solutions, crafting seamless web
+          experiences, and solving real-world problems through technology.
         </Typography>
 
         {/* Buttons */}

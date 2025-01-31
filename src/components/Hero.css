@@ -1,11 +1,17 @@
+/* HERO SECTION */
 .hero {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url('../assets/man-work.avif');
+  background-image: url("../assets/man-work.avif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
 }
 
 .hero .mask {
@@ -18,26 +24,38 @@
 }
 
 .hero .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
   color: white;
 }
 
-.hero .content h1 {
-  font-size: 4rem;
-  font-weight: bold;
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 0.5rem;
 }
 
-.hero .content p {
-  font-size: 1.6rem;
+.hero-description {
+  font-size: 1.4rem;
   margin-top: 1rem;
+  color: white;
+  line-height: 1.6;
 }
 
+/* BUTTONS */
 .hero .buttons {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .hero .buttons .btn {
@@ -46,9 +64,9 @@
   padding: 0.8rem 2rem;
   border-radius: 8px;
   text-decoration: none;
-  margin: 0.5rem;
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
+  text-align: center;
 }
 
 .hero .buttons .btn-light {
@@ -65,17 +83,73 @@
   background-color: #42a5f5;
   color: white;
 }
-@media screen and (max-width: 768px) {
-  .hero .content h1 {
-    font-size: 3rem;
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3.2rem;
   }
 
-  .hero .content p {
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+  }
+
+  .hero .buttons .btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
     font-size: 1.4rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .hero .buttons .btn {
     font-size: 1rem;
     padding: 0.6rem 1.6rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero .buttons .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.4rem;
   }
 }

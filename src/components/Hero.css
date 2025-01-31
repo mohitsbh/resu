@@ -1,59 +1,81 @@
-.mask {
+.hero {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: url("../assets/man-work.avif"); /* Add the path to your image */
+  background-image: url('../assets/man-work.avif');
   background-position: center;
-  background-size: cover; /* Ensures the image covers the full area */
-  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.mask::after {
-  content: "";
-  width: 100%;
-  height: 100%;
+.hero .mask {
+  position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
-  position: absolute;
-}
-
-.hero {
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hero .content {
   position: absolute;
-  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff; /* Ensures text remains visible */
+  color: white;
 }
 
 .hero .content h1 {
   font-size: 4rem;
-  padding: 0.6rem 0 1.5rem;
+  font-weight: bold;
 }
 
 .hero .content p {
-  font-size: 1.4rem;
-  font-weight: 200;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 
-.content .btn {
-  margin: 1rem 0.2rem;
+.hero .buttons {
+  margin-top: 2rem;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 640px) {
+.hero .buttons .btn {
+  background-color: #64b5f6;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero .buttons .btn-light {
+  background-color: transparent;
+  color: #64b5f6;
+  border: 2px solid #64b5f6;
+}
+
+.hero .buttons .btn:hover {
+  background-color: #42a5f5;
+}
+
+.hero .buttons .btn-light:hover {
+  background-color: #42a5f5;
+  color: white;
+}
+@media screen and (max-width: 768px) {
   .hero .content h1 {
     font-size: 3rem;
   }
 
   .hero .content p {
     font-size: 1.4rem;
+  }
+
+  .hero .buttons .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.6rem;
   }
 }

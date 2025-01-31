@@ -1,6 +1,6 @@
 import React from "react";
 import resumeImage from "../assets/resume.jpg";
-import resumePdf from "../documents/mohit_resume.pdf";
+// import resumePdf from "../documents/mohit_resume.pdf";
 import "./Resume.css";
 
 const Resume = () => {
@@ -12,7 +12,7 @@ const Resume = () => {
       <img src={resumeImage} alt="Resume" className="resume-image" />
 
       {/* PDF Resume (Optional) */}
-      <div className="resume-pdf">
+      {/* <div className="resume-pdf">
         <h2>Or view my resume in PDF format:</h2>
         <object
           data={resumePdf}
@@ -24,7 +24,7 @@ const Resume = () => {
             <a href={resumePdf} download>Download Resume</a>
           </p>
         </object>
-      </div>
+      </div> */}
     </div>
   );
 };

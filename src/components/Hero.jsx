@@ -11,7 +11,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="content">
-        <Typography variant="h1" className="hero-title">
+        <Typography variant="h4" className="hero-title">
           Hi, I'm <span className="highlight">Mohit Bhosale</span> 👋
         </Typography>
         <Typography variant="h5" className="hero-subtitle">

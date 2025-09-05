@@ -33,58 +33,20 @@
   /* badges */
   /* Use responsive grid for skills to avoid overlap */
   .skill-badges{ display:grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap:10px; align-items:start }
-  .skill{ display:flex; flex-direction:column; align-items:center; gap:6px; padding:8px; background:var(--panel); border-radius:10px; border:1px solid var(--border); color:var(--text); box-shadow: 0 10px 24px rgba(2,6,23,0.05); transition: transform .16s ease, box-shadow .16s ease; text-decoration:none; width:100%; min-width:0; position:relative; overflow:visible }
+  .skill{ display:flex; flex-direction:column; align-items:center; gap:6px; padding:8px; background:var(--panel); border-radius:10px; border:1px solid var(--border); color:var(--text); box-shadow: 0 10px 24px rgba(2,6,23,0.05); transition: transform .16s ease, box-shadow .16s ease; text-decoration:none; width:100%; min-width:0 }
   /* smaller icon with stronger shadow and subtle inner glow */
   .skill-icon{ width:36px; height:36px; border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:16px; color:var(--accent); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)); box-shadow: 0 6px 16px rgba(2,6,23,0.10), inset 0 -2px 6px rgba(255,255,255,0.02); transition: transform .16s ease, box-shadow .16s ease }
   .skill-icon.js{ color:#f0db4f }
   .skill-icon.css{ color:#2965f1 }
-  /* floating label / tooltip that appears on hover or focus */
   .skill-name{ font-weight:600 }
   .skill:hover{ transform: translateY(-6px); box-shadow: 0 14px 34px rgba(2,6,23,0.12); }
   .skill:focus-within, .skill:focus{ outline: none; transform: translateY(-4px); box-shadow: 0 12px 30px rgba(2,6,23,0.10); }
   .skill-icon:active{ transform: scale(.98) }
 
   /* hide skill name until hover/focus and show blue shadow on hover */
-  /* modern floating card */
-  .skill-name{
-    position: absolute;
-    left: 50%;
-    top: calc(100% + 10px);
-    transform: translate(-50%, 8px) scale(.98);
-    background: linear-gradient(180deg, var(--panel), rgba(255,255,255,0.01));
-    color: var(--text);
-    padding: 8px 10px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
-    white-space: nowrap;
-    font-weight:700;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .16s ease, transform .16s ease, visibility .16s;
-    z-index: 999;
-    pointer-events: none;
-    font-size: 0.92rem;
-  }
-  .skill-name::after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -6px;
-    transform: translateX(-50%);
-    width: 10px; height: 10px; background: var(--panel); border-left:1px solid var(--border); border-top:1px solid var(--border); transform: translateX(-50%) rotate(45deg);
-    box-shadow: -2px -2px 4px rgba(2,6,23,0.03);
-  }
-  .skill:hover .skill-name, .skill:focus .skill-name, .skill:focus-within .skill-name{ opacity:1; visibility:visible; transform: translate(-50%, 0) scale(1); pointer-events: auto }
-  .skill:hover .skill-icon{ box-shadow: 0 18px 50px rgba(3,169,244,0.14), inset 0 -2px 6px rgba(255,255,255,0.02); transform: translateY(-3px) scale(1.02) }
-
-  /* Mobile: show labels inline under icons to avoid overlay problems */
-  @media (max-width: 560px){
-    .skill{ padding:6px }
-    .skill-name{ position: static; transform:none; opacity:1; visibility:visible; pointer-events:auto; white-space:normal; margin-top:6px; box-shadow:none; border:none; padding:0; font-weight:600; font-size:0.92rem }
-    .skill-name::after{ display:none }
-    .skill:hover .skill-icon{ transform:none; box-shadow: 0 8px 20px rgba(2,6,23,0.08) }
-  }
+  .skill-name{ opacity:0; transform: translateY(6px); transition: opacity .18s ease, transform .18s ease }
+  .skill:hover .skill-name, .skill:focus .skill-name, .skill:focus-within .skill-name{ opacity:1; transform: translateY(0) }
+  .skill:hover .skill-icon{ box-shadow: 0 14px 40px rgba(3,169,244,0.12), inset 0 -2px 6px rgba(255,255,255,0.02) }
 
   /* Experience list */
   .section-title{ margin-bottom:12px; display:flex; align-items:center; gap:8px }

@@ -80,7 +80,6 @@ const Aboutcontent = () => {
               <div className="skill-icon"><FaDatabase /></div>
               <div className="skill-name">AI / Data</div>
             </a>
-            
           </div>
         </Grid>
 

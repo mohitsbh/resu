@@ -43,11 +43,3 @@
 @media (max-width:640px){
     .resume-pdf object{ height:420px }
 }
-
-.resume-certs{ width:100%; max-width:1100px; margin:2.5rem auto; padding:0 1rem }
-.resume-certs h2{ text-align:center; margin-bottom:1rem; color:var(--text) }
-.cert-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px }
-.cert-card{ background:var(--panel); padding:1rem; border-radius:10px; box-shadow:0 8px 22px rgba(2,6,23,0.12); text-align:left }
-.cert-card h3{ margin:0 0 6px; color:var(--accent) }
-.cert-card .issuer{ color:var(--muted); margin-bottom:8px }
-.cert-link{ color:var(--accent-600); font-weight:600; text-decoration:none }

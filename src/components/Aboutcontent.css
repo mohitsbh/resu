@@ -9,4 +9,14 @@
     border-radius: 10px;
   border: 1px solid var(--border);
   }
+
+  .about-lists{ max-width:1140px; margin:auto; padding:1rem }
+  .about-lists h5{ color:var(--text) }
+  .about-lists a{ color:var(--accent) }
+  .about-lists .MuiListItem-root{ background:transparent }
+
+  .about{ color: var(--text) }
+  .about a{ color: var(--accent) }
+  .about .MuiTypography-body1{ color: var(--text) }
+
   

@@ -26,7 +26,10 @@ import weatherreact from "../assets/weather-react.png"
 import bgchanger from "../assets/bgchanger.png"
 import galleryreact from "../assets/gallery-react.png"
 import netflixclone from "../assets/netflix-clone.png"
-
+import vidcompressor from "../assets/vidcompressor.png"
+import yourtube from "../assets/yourtube.png"
+import popex from "../assets/popex.png"
+import abrod from "../assets/abrod.png"
 
 
 const Wordcarddata = [
@@ -237,13 +240,45 @@ const Wordcarddata = [
     info: "This Website is my React Practice project.",
     viewLink: "https://gallery-react-five.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/gallery-react",
-  },{
+  }, {
     id: 27,
     imgsrc: netflixclone,
     title: "Netflix Clone",
     info: "This Website is my React Practice project.",
     viewLink: "https://hhhhvhnbnvh.netlify.app/",
     sourceLink: "https://github.com/mohitsbh/netflix-clone",
+  },
+  {
+    id: 28,
+    imgsrc: vidcompressor,
+    title: "Video Compressor",
+    info: "This is Javascript Practice project.",
+    viewLink: "https://video-compressor-8qt3.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/VideoCompressor",
+  },
+  {
+    id: 29,
+    imgsrc: yourtube,
+    title: "Full Stack Youtube Clone",
+    info: "This is NullClass Internship Project.",
+    viewLink: "https://youtube-frontend-jade.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/youtube_frontend",
+  },
+  {
+    id: 30,
+    imgsrc: popex,
+    title: "Login and Register Page",
+    info: "This is PopEx Internship Assignment Project.",
+    viewLink: "https://accountcreation.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/accountcreation",
+  },
+  {
+    id: 31,
+    imgsrc: abrod,
+    title: "Abroad Landing Page",
+    info: "This is Internship Assignment Project.",
+    viewLink: "https://mbbs-abroad.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/MBBS-Abroad",
   }
 ];
 

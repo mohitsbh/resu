@@ -30,26 +30,6 @@ const Resume = () => {
           </p>
         </object>
       </div>
-
-      {/* Certificates & Internships */}
-      <div className="resume-certs">
-        <h2>Certificates & Internships</h2>
-        <div className="cert-grid">
-          <div className="cert-card">
-            <h3>Data Science Bootcamp</h3>
-            <p className="issuer">ABC Academy • 2024</p>
-            <a className="cert-link" href="#" target="_blank" rel="noreferrer">View Certificate</a>
-          </div>
-
-          <div className="cert-card">
-            <h3>Frontend Developer Internship</h3>
-            <p className="issuer">Company XYZ • Jun 2023 - Aug 2023</p>
-            <a className="cert-link" href="#" target="_blank" rel="noreferrer">View Details</a>
-          </div>
-
-          {/* add more cards as needed */}
-        </div>
-      </div>
     </div>
   );
 };

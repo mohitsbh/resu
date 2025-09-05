@@ -137,7 +137,7 @@ const Aboutcontent = () => {
         {/* certificates */}
         <Grid item xs={12} md={6}>
           <Typography variant="h5" className="section-title"><FaCertificate className="icon-inline" /> Certificates</Typography>
-          <div className="cert-grid">
+          <div className="cert-grid" style={{marginTop: '16px'}}>
             {certificates.map((c) => (
               <article className="cert-card modern" key={c.title} tabIndex="0">
                 <div className="cert-left">
@@ -150,14 +150,7 @@ const Aboutcontent = () => {
                 <div className="cert-actions">
                   <a href={c.link} target="_blank" rel="noreferrer" aria-label={`Open ${c.title}`} className="cert-action-link">Open</a>
                 </div>
-                {/* Popup with full certificate info — appears on hover or focus */}
-                <div className="cert-popup" role="dialog" aria-hidden="true">
-                  <div className="cert-popup-inner">
-                    <strong className="cert-popup-title">{c.title}</strong>
-                    <div className="cert-popup-meta">{c.issuer} • {c.date}</div>
-                    <a className="cert-popup-open" href={c.link} target="_blank" rel="noreferrer">View Certificate</a>
-                  </div>
-                </div>
+                
               </article>
             ))}
           </div>

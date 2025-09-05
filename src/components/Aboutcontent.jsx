@@ -7,7 +7,7 @@ import "./Aboutcontent.css";
 const Aboutcontent = () => {
   const certificates = [
     { title: 'Generative AI Bootcamp', link: 'https://www.udemy.com/certificate/UC-1aabd0b4-014d-4f17-be00-30ad7630bbef/', issuer: 'Udemy', date: '2024' },
-    { title: 'SQL 2.0 Webinar', link: 'https://drive.google.com/file/d/1Ia1_KbgthLiVjXZRt9NZrt52YK0X0A8g/view', issuer: 'Google Drive', date: '2024' },
+    { title: 'SQL 2.0 Webinar', link: 'https://drive.google.com/file/d/1Ia1_KbgthLiVjXZRt9NZrt52YK0X0A8g/view', issuer: 'SkillEcted', date: '2024' },
     { title: 'UI/UX Design with Figma', link: 'https://www.udemy.com/certificate/UC-4676d60c-70fa-4805-b4ca-520029bdbaef/', issuer: 'Udemy', date: '2023' },
     { title: 'Javascript For Beginners', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-57241c7f-c02d-4eee-a008-5a4d34b724b9.pdf', issuer: 'Udemy', date: '2022' },
     { title: 'Practical Web Development', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eec607b-3e3c-4921-8407-3910c9cc426a.pdf', issuer: 'Udemy', date: '2022' },
@@ -80,6 +80,7 @@ const Aboutcontent = () => {
               <div className="skill-icon"><FaDatabase /></div>
               <div className="skill-name">AI / Data</div>
             </a>
+            
           </div>
         </Grid>
 
@@ -139,7 +140,7 @@ const Aboutcontent = () => {
           <Typography variant="h5" className="section-title"><FaCertificate className="icon-inline" /> Certificates</Typography>
           <div className="cert-grid">
             {certificates.map((c) => (
-              <article className="cert-card modern" key={c.title}>
+              <article className="cert-card modern" key={c.title} tabIndex="0">
                 <div className="cert-left">
                   <div className="cert-badge"><FaCertificate /></div>
                 </div>
@@ -149,6 +150,14 @@ const Aboutcontent = () => {
                 </div>
                 <div className="cert-actions">
                   <a href={c.link} target="_blank" rel="noreferrer" aria-label={`Open ${c.title}`} className="cert-action-link">Open</a>
+                </div>
+                {/* Popup with full certificate info — appears on hover or focus */}
+                <div className="cert-popup" role="dialog" aria-hidden="true">
+                  <div className="cert-popup-inner">
+                    <strong className="cert-popup-title">{c.title}</strong>
+                    <div className="cert-popup-meta">{c.issuer} • {c.date}</div>
+                    <a className="cert-popup-open" href={c.link} target="_blank" rel="noreferrer">View Certificate</a>
+                  </div>
                 </div>
               </article>
             ))}

@@ -29,11 +29,15 @@
 
 .hero2 h1 {
   font-size: 2.4rem;
+  color: var(--image-text);
+  text-shadow: 0 8px 20px rgba(2,6,23,0.45);
 }
 
 .hero2 p {
   font-size: 1.4rem;
   text-align: center;
+  color: var(--image-text);
+  opacity: 0.94;
 }
 
 @media screen and (max-width: 640px) {

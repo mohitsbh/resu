@@ -1,10 +1,53 @@
-img{
-    /* width: 80vw; */
+/* Resume component styles */
+.Resume{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    padding:2rem 1rem;
+}
+
+.Resume h1{
+    color: var(--accent); /* blue accent */
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 6px 18px rgba(2,6,23,0.45); /* improves readability over images */
+}
+
+.Resume img{
     max-width: 60%;
     max-height: 60%;
-    /* height: 80vh; */
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-position: center;
+    width: 100%;
+    height: auto;
+    display:block;
+    padding:10px;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.25);
+    background-position:center;
 }
+
+@media (max-width: 720px){
+    .Resume img{ max-width: 92%; }
+    .Resume h1{ font-size: 1.6rem }
+}
+
+.resume-pdf{ width:100%; max-width:960px; margin-top:1.5rem }
+.resume-pdf h2{ margin-bottom:0.6rem; color:var(--text) }
+.pdf-controls{ display:flex; gap:12px; margin-bottom:10px; flex-wrap:wrap; justify-content:center }
+.pdf-controls .btn{ padding: 10px 18px; border-radius:8px; text-decoration:none }
+.resume-pdf object{ width:100%; border-radius:8px; box-shadow: 0 8px 30px rgba(2,6,23,0.15) }
+
+@media (max-width:640px){
+    .resume-pdf object{ height:420px }
+}
+
+.resume-certs{ width:100%; max-width:1100px; margin:2.5rem auto; padding:0 1rem }
+.resume-certs h2{ text-align:center; margin-bottom:1rem; color:var(--text) }
+.cert-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px }
+.cert-card{ background:var(--panel); padding:1rem; border-radius:10px; box-shadow:0 8px 22px rgba(2,6,23,0.12); text-align:left }
+.cert-card h3{ margin:0 0 6px; color:var(--accent) }
+.cert-card .issuer{ color:var(--muted); margin-bottom:8px }
+.cert-link{ color:var(--accent-600); font-weight:600; text-decoration:none }

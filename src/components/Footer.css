@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
   padding: 6rem 0;
-  background: linear-gradient(45deg, #1d1d1d, #343434);
-  color: #fff;
+  background-color: var(--footer-bg);
+  color: var(--text);
 }
 
 .footer-content {
@@ -27,7 +27,7 @@
 }
 
 .icon {
-  color: #f39c12;
+  color: var(--icon-color);
   font-size: 1.5rem;
 }
 
@@ -43,8 +43,14 @@
 
 .social-icon:hover {
   transform: scale(1.2);
-  color: #f39c12;
+  color: var(--icon-color);
 }
+
+.site-footer{ width:100%; padding: 4rem 0; background-color: var(--footer-bg); color: var(--text); }
+.site-footer .footer-col .footer-line{ display:flex; align-items:center; justify-content:center; gap:8px }
+.site-footer .footer-icon{ color:var(--icon-color); font-size:1.4rem }
+.site-footer .social-row .social-btn{ color:var(--icon-color); transition:all .25s ease }
+.site-footer .social-row .social-btn:hover{ transform:scale(1.12); color:var(--icon-color) }
 
 h4 {
   font-size: 1.5rem;

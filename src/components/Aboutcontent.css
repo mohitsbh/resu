@@ -7,6 +7,6 @@
   .about .img-container img {
     max-width: 90%;
     border-radius: 10px;
-    border: 1px solid #333;
+  border: 1px solid var(--border);
   }
   

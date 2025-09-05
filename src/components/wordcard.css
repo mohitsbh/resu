@@ -10,10 +10,10 @@
 
 /* Card Styling */
 .project-card {
-  background: #232323; /* Darker background for better contrast */
+  background: var(--panel); /* themed panel */
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for modern design */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex; /* Makes the card a flex container */
   flex-direction: column; /* Stacks children vertically */
@@ -40,7 +40,7 @@
 
 /* Title Styling */
 .pro-title {
-  color: #ffffff;
+  color: var(--text);
   margin: 0.5rem 0 1rem;
   font-size: 1.4rem;
   font-weight: 600;
@@ -50,7 +50,7 @@
 
 /* Description Styling */
 .pro-info {
-  color: #cfcfcf;
+  color: var(--muted);
   font-size: 1rem;
   margin-bottom: 1.5rem;
   text-align: justify;
@@ -67,7 +67,7 @@
 
 /* Button Styling */
 .pro-buttons .btn {
-  background-color: #1e90ff; /* More vibrant blue */
+  background-color: var(--accent); /* themed accent */
   color: #ffffff;
   text-decoration: none;
   padding: 0.6rem 1.5rem;
@@ -78,7 +78,7 @@
 }
 
 .pro-buttons .btn:hover {
-  background-color: #1565c0; /* Darker blue on hover */
+  background-color: var(--accent-600); /* hover accent */
   transform: scale(1.05); /* Subtle zoom effect */
 }
 

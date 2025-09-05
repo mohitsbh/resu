@@ -35,8 +35,9 @@ const Form = () => {
         justifyContent: "center",
         padding: "4rem 1rem",
         color:'white',
-        backgroundColor: "#000", // White background for the form
+        // backgroundColor: "#000", // White background for the form
       }}
+      
     >
       <form
         onSubmit={onSubmit}

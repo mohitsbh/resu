@@ -1,20 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "outfit", sans-serif;
-  background-color: #000;
-  color: #fff;
-  scroll-behavior: smooth;
-  
-}
-
-h1,
 h4,
 p,
 a {
@@ -47,3 +30,77 @@ ul {
   color: #fff;
   transition: all ease 0.3s;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* CSS Variables for theming */
+:root{
+  --bg: #0b0f12;
+  --panel: #0f1720;
+  --text: #eef6ff;
+  --muted: #9fb7d8;
+  --accent: #64b5f6;
+  --accent-600: #42a5f5;
+  --border: rgba(255,255,255,0.06);
+  --header-bg: rgba(2,6,23,0.6);
+  --image-text: #ffd54f; /* golden/yellow for text over images */
+  --footer-bg: #2a2a2a; /* default footer bg for dark theme (gray) */
+}
+
+/* Light theme overrides (will be enabled when body has .light) */
+body.light{
+  --bg: #ffffff;
+  --panel: #f7fbff;
+  --text: #071428;
+  --muted: #475569;
+  --accent: #0b63d6;
+  --accent-600: #084fb0;
+  --border: rgba(0,0,0,0.12);
+  --header-bg: rgba(255,255,255,0.92);
+  --image-text: var(--accent); /* use blue in light theme for text over images */
+  --footer-bg: #ffffff; /* footer bg for light theme */
+}
+
+/* icon color: yellow in dark, blue in light */
+:root{ --icon-color: #f39c12 }
+body.light{ --icon-color: #0b63d6 }
+
+/* Respect OS preference by default */
+@media (prefers-color-scheme: light){
+  body:not(.dark){
+    /* if user hasn't forced dark, use light tokens */
+    --bg: #ffffff;
+    --panel: #f7fbff;
+    --text: #071428;
+    --muted: #475569;
+    --accent: #0b63d6;
+    --accent-600: #084fb0;
+  }
+}
+
+*{ box-sizing: border-box; margin:0; padding:0 }
+
+body{
+  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+h1,h4,p,a{ color: var(--text); text-decoration:none }
+ul{ list-style:none }
+
+.btn{ padding:12px 32px; font-size:1rem; text-transform:uppercase; background:var(--accent); color: #fff; border-radius:8px; border:none; font-weight:600; cursor:pointer }
+.btn-light{ background:transparent; color:var(--text); border:1px solid var(--border) }
+.btn:hover{ filter:brightness(0.98); transform:translateY(-1px); transition:all .18s ease }
+
+/* Utility classes for components that used the old global .btn styles */
+.legacy-btn{ padding:10px 20px; border-radius:6px }
+
+.over-image-text {
+  color: var(--image-text) !important; 
+  text-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+.over-image-text{ color: var(--image-text) !important; text-shadow: 0 8px 20px rgba(2,6,23,0.45); }

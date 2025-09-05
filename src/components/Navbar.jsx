@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 // import Resume from "../assets/resume.jpg";
 import Resume from "./Resume";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -48,12 +49,13 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <FaTimes size={20} color="#fff" />
-        ) : (
-          <FaBars size={20} color="#fff" />
-        )}
+      <div className="right-controls">
+        <div className="hamburger" onClick={handleClick}>
+          {click ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </div>
+        <div className="theme-wrap">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

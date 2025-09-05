@@ -11,10 +11,10 @@ const Hero = () => {
 
       {/* Content */}
       <div className="content">
-        <Typography variant="h4" className="hero-title">
+  <Typography variant="h4" className="hero-title over-image">
           Hi, I'm <span className="highlight">Mohit Bhosale</span> 👋
         </Typography>
-        <Typography variant="h5" className="hero-subtitle">
+  <Typography variant="h5" className="hero-subtitle over-image">
           🚀 AI & Data Science Enthusiast | Software & Web Developer
         </Typography>
         <Typography className="hero-description">

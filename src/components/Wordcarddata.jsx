@@ -30,7 +30,7 @@ import vidcompressor from "../assets/vidcompressor.png"
 import yourtube from "../assets/yourtube.png"
 import popex from "../assets/popex.png"
 import abrod from "../assets/abrod.png"
-
+import studentdashboard from "../assets/studentdashboard.png"
 
 const Wordcarddata = [
   {
@@ -279,6 +279,14 @@ const Wordcarddata = [
     info: "This is Internship Assignment Project.",
     viewLink: "https://mbbs-abroad.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/MBBS-Abroad",
+  },
+  {
+    id: 32,
+    imgsrc: studentdashboard,
+    title: "Student Dashboard",
+    info: "This is Internship Assignment Project.",
+    viewLink: "https://stu-m.vercel.app/students",
+    sourceLink: "https://github.com/mohitsbh/stu_m",
   }
 ];
 

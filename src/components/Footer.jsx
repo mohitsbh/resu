@@ -5,7 +5,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Box className="site-footer">
+    <Box className="site-footer" sx={{ borderTop: '1px solid var(--border)',padding: 4, marginTop: 4 }}>
       <Grid container spacing={4} justifyContent="center">
         {/* Left Footer */}
         <Grid item xs={12} sm={6} textAlign="center">
@@ -13,29 +13,22 @@ const Footer = () => {
             <Box className="footer-line">
               <FaHome className="footer-icon" />
               <Box sx={{ marginLeft: 1 }}>
-                <Typography variant="body1">Thane, Maharashtra,</Typography>
-                <Typography variant="body1">India.</Typography>
+                <Typography variant="body2">Thane, Maharashtra, India</Typography>
               </Box>
             </Box>
-
             <Box className="footer-line">
               <FaPhone className="footer-icon" />
-              <Typography variant="body1" sx={{ marginLeft: 1 }}>
-                +91 9833714188
-              </Typography>
+              <Typography variant="body2" sx={{ marginLeft: 1 }}>+91 9833714188</Typography>
             </Box>
-
             <Box className="footer-line">
               <FaMailBulk className="footer-icon" />
-              <Typography variant="body1" sx={{ marginLeft: 1 }}>
-                msbhosale003@gmail.com
-              </Typography>
+              <Typography variant="body2" sx={{ marginLeft: 1 }}>msbhosale003@gmail.com</Typography>
             </Box>
           </Box>
         </Grid>
 
         {/* Right Footer */}
-        <Grid item xs={12} sm={6} textAlign="center">
+        <Grid item xs={12} sm={6} textAlign="center" >
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>About Me</Typography>
           <Typography variant="body1" sx={{ marginTop: 2 }}>
             This is me, Mohit Bhosale. I enjoy discussing new projects and design challenges.
@@ -47,7 +40,7 @@ const Footer = () => {
             <IconButton href="https://www.instagram.com/bhosale_ms_01/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-btn">
               <FaInstagram />
             </IconButton>
-            <IconButton href="https://www.linkedin.com/in/mohit-bhosale-912903284/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-btn">
+            <IconButton href="https://www.linkedin.com/in/mohit-shankar-bhosale-912903284/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-btn">
               <FaLinkedin />
             </IconButton>
             <IconButton href="https://github.com/mohitsbh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-btn">
@@ -56,6 +49,10 @@ const Footer = () => {
           </Box>
         </Grid>
       </Grid>
+
+      <Box className="footer-bottom" sx={{ marginTop: 1, paddingTop: 3, textAlign: 'center' }}>
+        <Typography variant="body2">© {new Date().getFullYear()} Mohit Bhosale — Crafted with care.</Typography>
+      </Box>
     </Box>
   );
 };

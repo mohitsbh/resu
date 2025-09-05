@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaProjectDiagram, FaUser, FaEnvelope, FaFileAlt } from "react-icons/fa";
 // import Resume from "../assets/resume.jpg";
 import Resume from "./Resume";
 import ThemeToggle from "./ThemeToggle";
@@ -22,10 +22,8 @@ const Navbar = () => {
   window.addEventListener("scroll", changecolor);
 
   return (
-    <div className={color ? "header header-bg" : "header"}>
-      <Link to="/">
-        <h1>Mohit.</h1>
-      </Link>
+    <>
+  <div className={color ? "header header-bg" : "header"}>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
@@ -57,7 +55,30 @@ const Navbar = () => {
           <ThemeToggle />
         </div>
       </div>
-    </div>
+      </div>
+
+      {/* Right-side vertical icon navbar (desktop on large screens, bottom bar on mobile) */}
+      <nav className="side-nav" aria-label="Quick links">
+        <Link to="/" title="Home" aria-label="Home">
+          <FaHome />
+        </Link>
+        <Link to="/projects" title="Projects" aria-label="Projects">
+          <FaProjectDiagram />
+        </Link>
+        <Link to="/about" title="About" aria-label="About">
+          <FaUser />
+        </Link>
+        <Link to="/contact" title="Contact" aria-label="Contact">
+          <FaEnvelope />
+        </Link>
+        <Link to="/Resume" title="Resume" aria-label="Resume">
+          <FaFileAlt />
+        </Link>
+        <div className="side-toggle" title="Toggle theme" aria-hidden="true">
+          <ThemeToggle />
+        </div>
+      </nav>
+    </>
   );
 };
 

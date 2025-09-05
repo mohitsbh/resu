@@ -1,5 +1,5 @@
 .header {
-  display: flex;
+  display: none; /* Header hidden — using right-side nav only */
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
@@ -41,37 +41,90 @@
   display: none; /* Hide by default */
 }
 
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+/* Side nav (desktop only) */
+.side-nav {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.6); /* subtle translucency, will be masked by theme */
   background: var(--panel);
-    top: 0;
-    left: -100%;
-    z-index: -3;
-    position: absolute;
-    transition: all ease 0.3s;
-  }
-  .nav-menu.active {
-    left: 0;
+  padding: 6px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 120;
+  /* softer, deeper shadow + slight lift */
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.side-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  color:var(--icon-color);
+  border-radius:10px;
+  transition: transform .18s cubic-bezier(.2,.9,.2,1),
+              box-shadow .18s ease,
+              background-color .18s ease,
+              color .18s ease;
+  will-change: transform;
+}
+.side-nav a:hover{
+  background: rgba(0,0,0,0.06);
+  transform: translateY(-6px) scale(1.02);
+  color: var(--accent);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+}
+.side-nav a:active{ transform: translateY(-2px) scale(.98); }
+.side-nav a:focus-visible{ outline: 2px solid var(--accent-600); outline-offset: 3px; }
+
+.side-nav .side-toggle{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:8px }
+/* give the theme toggle a subtle background and hover */
+.side-nav .side-toggle button, .side-nav .side-toggle [role="button"]{ background: transparent; border: none; padding: 0; display:inline-flex }
+.side-nav .side-toggle:hover{ transform: translateY(-4px); }
+
+
+@media screen and (max-width: 768px) {
+  /* On mobile hide the top nav/menu and show only the bottom icon bar */
+  .nav-menu {
+    display: none !important;
   }
 
-  .nav-menu li {
-    padding: 1rem 0;
-  }
-  .nav-menu li a {
-    font-size: 2rem;
+  .right-controls {
+    display: none !important;
   }
 
-  .hamburger {
-    display: inline-flex; /* Show on small screens */
-  }
+  /* Ensure header remains hidden */
+  .header { display: none; }
 
-  /* On mobile, align the right-controls to the left of the header for compact layout */
-  .right-controls{ gap:8px }
-  .header{ padding: 0.7rem 0.9rem }
-  .right-controls .hamburger{ margin-left: 6px }
+  /* Show side-nav as a bottom-centered icon-only action bar */
+  .side-nav {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+    top: auto;
+    right: auto;
+    padding: 6px 10px;
+    border-radius: 999px;
+    flex-direction: row;
+    gap: 10px;
+    background: var(--panel);
+    box-shadow: 0 12px 34px rgba(15,23,42,0.14);
+    z-index: 40;
+  }
+  .side-nav a, .side-nav .side-toggle{ width:52px; height:52px; display:inline-flex; align-items:center; justify-content:center }
+  .side-nav a svg{ width:22px; height:22px }
+  .side-nav a:hover{ transform: translateY(-4px) scale(1.02) }
+
+  /* Respect safe area on modern phones */
+  .side-nav{ padding-bottom: calc(6px + env(safe-area-inset-bottom)); }
 }

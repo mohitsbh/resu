@@ -35,35 +35,37 @@ ul {
 
 /* CSS Variables for theming */
 :root{
-  --bg: #0b0f12;
-  --panel: #0f1720;
-  --text: #eef6ff;
-  --muted: #9fb7d8;
-  --accent: #64b5f6;
-  --accent-600: #42a5f5;
+  /* Dark theme (professional navy + blue accent) */
+  --bg: #0b1220;          /* page background */
+  --panel: #0f1b2b;       /* cards, panels */
+  --text: #e6f0fb;        /* main text */
+  --muted: #98a9c3;       /* secondary text */
+  --accent: #2b9bf4;      /* primary brand blue */
+  --accent-600: #1f7edb;  /* richer blue for hover */
   --border: rgba(255,255,255,0.06);
-  --header-bg: rgba(2,6,23,0.6);
-  --image-text: #ffd54f; /* golden/yellow for text over images */
-  --footer-bg: #2a2a2a; /* default footer bg for dark theme (gray) */
+  --header-bg: rgba(8,12,20,0.6);
+  --image-text: #ffd54f;  /* golden/yellow for text over images in dark mode */
+  --footer-bg: #0b1220;   /* footer background in dark theme */
 }
 
 /* Light theme overrides (will be enabled when body has .light) */
 body.light{
+  /* Light theme (clean whites + professional blue) */
   --bg: #ffffff;
   --panel: #f7fbff;
-  --text: #071428;
+  --text: #0b1726;
   --muted: #475569;
-  --accent: #0b63d6;
-  --accent-600: #084fb0;
-  --border: rgba(0,0,0,0.12);
-  --header-bg: rgba(255,255,255,0.92);
-  --image-text: var(--accent); /* use blue in light theme for text over images */
+  --accent: #1f6feb;
+  --accent-600: #1458c9;
+  --border: rgba(0,0,0,0.08);
+  --header-bg: rgba(255,255,255,0.96);
+  --image-text: var(--accent); /* blue for text over images in light mode */
   --footer-bg: #ffffff; /* footer bg for light theme */
 }
 
 /* icon color: yellow in dark, blue in light */
-:root{ --icon-color: #f39c12 }
-body.light{ --icon-color: #0b63d6 }
+:root{ --icon-color: #f7c948 } /* warm gold for icons in dark mode */
+body.light{ --icon-color: var(--accent) }
 
 /* Respect OS preference by default */
 @media (prefers-color-scheme: light){

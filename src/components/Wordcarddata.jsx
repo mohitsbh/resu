@@ -103,7 +103,7 @@ const Wordcarddata = [
     title: "Justice For Sport",
     info: "This Website is made for my client.",
     category: "Client",
-    viewLink: "https://justice-for-sport.netlify.app/",
+    viewLink: "https://peaceful-sprinkles-3709b3.netlify.app/",
     sourceLink: "https://github.com/mohitsbh/justice-for-sport",
   },
   {

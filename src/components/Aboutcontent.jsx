@@ -5,7 +5,7 @@ import { FaUserTie, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaEnvelope, F
 import { SiMongodb, SiExpress, SiTensorflow, SiC, SiPython } from "react-icons/si";
 import "./Aboutcontent.css";
 import mohit_profile from "../assets/mohit_profile.jpg";
-import { CgEnter } from "react-icons/cg";
+
 
 const Aboutcontent = () => {
   const certificates = [
@@ -42,7 +42,7 @@ const Aboutcontent = () => {
                 <Link to="/contact">
                   <Button variant="contained" color="primary">Contact</Button>
                 </Link>
-                <a href="/src/Documents/mohit_resume.pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
+                <a href="/src/Documents/MohitShankar Bhosale_InternshalaResume (1).pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
                   <Button variant="outlined">Resume</Button>
                 </a>
                 <a href="mailto:msbhosale003@gmail.com" style={{ marginLeft: 10 }} aria-label="Email">

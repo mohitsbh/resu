@@ -1,23 +1,71 @@
-.site-footer{ width:100%; padding: 48px 24px 28px 24px; background-color: var(--footer-bg); color: var(--text); }
-.site-footer .footer-brand{ padding: 8px }
-.site-footer .footer-links{ padding: 8px }
-.site-footer .footer-contact{ padding: 8px }
-.site-footer .footer-link{ color:var(--text); text-decoration:none; opacity:0.95; transition: all .18s ease }
-.site-footer .footer-link:hover{ color:var(--accent); transform: translateX(4px) }
-.site-footer .footer-line{ display:flex; align-items:center; gap:8px; margin-top:8px }
-.site-footer .footer-icon{ color:var(--icon-color); font-size:1.25rem }
-.site-footer .social-row .social-btn{ color:var(--icon-color); transition:all .22s ease; border:1px solid transparent }
-.site-footer .social-row .social-btn:hover{ transform:translateY(-4px); box-shadow: 0 10px 30px rgba(43,155,244,0.12); color:var(--accent) }
+.site-footer {
+  width: 100%;
+  padding: 48px 24px 28px 24px;
+  background-color: var(--footer-bg);
+  color: var(--text);
+}
+.site-footer .footer-brand {
+  padding: 8px;
+}
+.site-footer .footer-links {
+  padding: 8px;
+}
+.site-footer .footer-contact {
+  padding: 8px;
+}
+.site-footer .footer-link {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.95;
+  transition: all 0.18s ease;
+}
+.site-footer .footer-link:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+.site-footer .footer-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.site-footer .footer-icon {
+  color: var(--icon-color);
+  font-size: 1.25rem;
+}
+.site-footer .social-row .social-btn {
+  color: var(--icon-color);
+  transition: all 0.22s ease;
+  border: 1px solid transparent;
+}
+.site-footer .social-row .social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(43, 155, 244, 0.12);
+  color: var(--accent);
+}
 
-.site-footer .certs{ display:flex; gap:8px; margin-top:12px }
+.site-footer .certs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
 
-.footer-bottom{ margin-top:24px; }
+.footer-bottom {
+  margin-top: 24px;
+}
 
-@media screen and (max-width: 720px){
-  .site-footer .footer-brand, .site-footer .footer-links, .site-footer .footer-contact{ text-align:center }
+@media screen and (max-width: 720px) {
+  .site-footer .footer-brand,
+  .site-footer .footer-links,
+  .site-footer .footer-contact {
+    text-align: center;
+  }
 }
 
 /* wider gutters on large screens */
 @media (min-width: 1024px) {
-  .site-footer{ padding-left: 96px; padding-right: 96px }
+  .site-footer {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import resumeImage from "../assets/resume.jpg";
-import resumePdf from "../Documents/mohit_resume.pdf";
+import resumePdf from "../Documents/MohitShankar Bhosale_InternshalaResume (2).pdf";
 import "./Resume.css";
+import Navbar from "./Navbar";
 
 const Resume = () => {
   return (
     <div className="Resume">
+      <Navbar />
       <h1>My Resume</h1>
 
       {/* Image Resume */}

@@ -42,7 +42,7 @@ const Aboutcontent = () => {
                 <Link to="/contact">
                   <Button variant="contained" color="primary">Contact</Button>
                 </Link>
-                <a href="/src/Documents/MohitShankar Bhosale_InternshalaResume (1).pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
+                <a href="/src/Documents/MohitShankar Bhosale_InternshalaResume (2).pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
                   <Button variant="outlined">Resume</Button>
                 </a>
                 <a href="mailto:msbhosale003@gmail.com" style={{ marginLeft: 10 }} aria-label="Email">
@@ -151,7 +151,7 @@ const Aboutcontent = () => {
                 link: 'https://drive.google.com/file/d/1LDRy77IeiFTTmTuJerlksFGsjOw8BH1E/view'
               }
             ].map((e, idx) => (
-              <div key={e.title} className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}>
+              <div key={`${e.title}-${idx}`} className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}>
                 <div className="timeline-marker" style={{ zIndex: 1 }}><FaBriefcase /></div>
                 <div className="timeline-content">
                   <div className="timeline-head">
@@ -170,8 +170,8 @@ const Aboutcontent = () => {
         <Grid item xs={12} md={6}>
           <Typography variant="h5" className="section-title"><FaCertificate className="icon-inline" /> Certificates</Typography>
           <div className="cert-grid" style={{marginTop: '16px'}}>
-            {certificates.map((c) => (
-              <article className="cert-card modern" key={c.title} tabIndex="0">
+            {certificates.map((c, i) => (
+              <article className="cert-card modern" key={`${c.title}-${i}`} tabIndex="0">
                 <div className="cert-left">
                   <div className="cert-badge"><FaCertificate /></div>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Box, Typography, IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 import { FaPhone, FaHome, FaMailBulk, FaFacebook, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import "./Footer.css";
 
@@ -11,18 +12,45 @@ const Footer = () => {
         <Grid item xs={12} sm={6} textAlign="center">
           <Box className="footer-col">
             <Box className="footer-line">
-              <FaHome className="footer-icon" />
+              {/* Home icon navigates to contact page */}
+              <IconButton component={Link} to="/contact" aria-label="Contact" className="footer-icon-btn">
+                <FaHome className="footer-icon" />
+              </IconButton>
               <Box sx={{ marginLeft: 1 }}>
-                <Typography variant="body2">Thane, Maharashtra, India</Typography>
+                {/* Address opens Google Maps */}
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Thane%2C+Maharashtra%2C+India"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Typography variant="body2">Thane, Maharashtra, India</Typography>
+                </a>
               </Box>
             </Box>
             <Box className="footer-line">
-              <FaPhone className="footer-icon" />
-              <Typography variant="body2" sx={{ marginLeft: 1 }}>+91 9833714188</Typography>
+              {/* Phone icon initiates a call on supported devices */}
+              <IconButton component="a" href="tel:+919833714188" aria-label="Call" className="footer-icon-btn">
+                <FaPhone className="footer-icon" />
+              </IconButton>
+              <Typography variant="body2" sx={{ marginLeft: 1 }}>
+                <a href="tel:+919833714188">+91 9833714188</a>
+              </Typography>
             </Box>
             <Box className="footer-line">
-              <FaMailBulk className="footer-icon" />
-              <Typography variant="body2" sx={{ marginLeft: 1 }}>msbhosale003@gmail.com</Typography>
+              {/* Email icon opens Gmail compose window */}
+              <IconButton
+                component="a"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=msbhosale003@gmail.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Open Gmail"
+                className="footer-icon-btn"
+              >
+                <FaMailBulk className="footer-icon" />
+              </IconButton>
+              <Typography variant="body2" sx={{ marginLeft: 1 }}>
+                <a href="mailto:msbhosale003@gmail.com">msbhosale003@gmail.com</a>
+              </Typography>
             </Box>
           </Box>
         </Grid>

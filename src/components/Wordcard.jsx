@@ -202,14 +202,21 @@ import "./wordcard.css";
 import { NavLink } from "react-router-dom";
 import Wordcarddata from "./Wordcarddata";
 
-const Wordcard = () => {
+// Wordcard now accepts an optional `projects` prop. If not provided,
+// it falls back to the default Wordcarddata.
+const Wordcard = ({ projects }) => {
+  const list = projects && Array.isArray(projects) ? projects : Wordcarddata;
+
   return (
     <div className="project-container">
-      {Wordcarddata.map((project) => (
+      {list.map((project) => (
         <div key={project.id} className="project-card">
           <img src={project.imgsrc} alt={project.title} />
           <h2 className="pro-title">{project.title}</h2>
           <p className="pro-info">{project.info}</p>
+          <div className="pro-meta">
+            <span className="pro-category" data-cat={project.category}>{project.category}</span>
+          </div>
           <div className="pro-buttons">
             <NavLink to={project.viewLink} className="btn" target="_blank">
               View

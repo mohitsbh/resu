@@ -1,0 +1,72 @@
+/* Minimal styling for projects panel and controls */
+.projects-panel {
+  padding: 2rem 1rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projects-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projects-search {
+  flex: 1 1 320px;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e3e6ee);
+  background: var(--panel);
+  color: var(--text);
+}
+
+.projects-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-600));
+  color: white;
+  border-color: transparent;
+}
+
+.internship-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.projects-count {
+  margin: 0.5rem 0 1rem;
+  color: var(--muted);
+}
+
+/* Reuse existing .project-container responsive grid from wordcard.css */
+@media (max-width: 640px) {
+  .projects-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .projects-search { width: 100%; }
+}

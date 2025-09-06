@@ -34,22 +34,22 @@ ul {
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* CSS Variables for theming */
-:root{
+:root {
   /* Dark theme (professional navy + blue accent) */
-  --bg: #0b1220;          /* page background */
-  --panel: #0f1b2b;       /* cards, panels */
-  --text: #e6f0fb;        /* main text */
-  --muted: #98a9c3;       /* secondary text */
-  --accent: #2b9bf4;      /* primary brand blue */
-  --accent-600: #1f7edb;  /* richer blue for hover */
-  --border: rgba(255,255,255,0.06);
-  --header-bg: rgba(8,12,20,0.6);
-  --image-text: #ffd54f;  /* golden/yellow for text over images in dark mode */
-  --footer-bg: #0b1220;   /* footer background in dark theme */
+  --bg: #0b1220; /* page background */
+  --panel: #0f1b2b; /* cards, panels */
+  --text: #e6f0fb; /* main text */
+  --muted: #98a9c3; /* secondary text */
+  --accent: #2b9bf4; /* primary brand blue */
+  --accent-600: #1f7edb; /* richer blue for hover */
+  --border: rgba(255, 255, 255, 0.06);
+  --header-bg: rgba(8, 12, 20, 0.6);
+  --image-text: #ffd54f; /* golden/yellow for text over images in dark mode */
+  --footer-bg: #0b1220; /* footer background in dark theme */
 }
 
 /* Light theme overrides (will be enabled when body has .light) */
-body.light{
+body.light {
   /* Light theme (clean whites + professional blue) */
   --bg: #ffffff;
   --panel: #f7fbff;
@@ -57,19 +57,23 @@ body.light{
   --muted: #475569;
   --accent: #1f6feb;
   --accent-600: #1458c9;
-  --border: rgba(0,0,0,0.08);
-  --header-bg: rgba(255,255,255,0.96);
+  --border: rgba(0, 0, 0, 0.08);
+  --header-bg: rgba(255, 255, 255, 0.96);
   --image-text: var(--accent); /* blue for text over images in light mode */
   --footer-bg: #ffffff; /* footer bg for light theme */
 }
 
 /* icon color: yellow in dark, blue in light */
-:root{ --icon-color: #f7c948 } /* warm gold for icons in dark mode */
-body.light{ --icon-color: var(--accent) }
+:root {
+  --icon-color: #f7c948;
+} /* warm gold for icons in dark mode */
+body.light {
+  --icon-color: var(--accent);
+}
 
 /* Respect OS preference by default */
-@media (prefers-color-scheme: light){
-  body:not(.dark){
+@media (prefers-color-scheme: light) {
+  body:not(.dark) {
     /* if user hasn't forced dark, use light tokens */
     --bg: #ffffff;
     --panel: #f7fbff;
@@ -80,29 +84,66 @@ body.light{ --icon-color: var(--accent) }
   }
 }
 
-*{ box-sizing: border-box; margin:0; padding:0 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body{
-  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+body {
+  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
   background-color: var(--bg);
   color: var(--text);
   scroll-behavior: smooth;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1,h4,p,a{ color: var(--text); text-decoration:none }
-ul{ list-style:none }
+h1,
+h4,
+p,
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
 
-.btn{ padding:12px 32px; font-size:1rem; text-transform:uppercase; background:var(--accent); color: #fff; border-radius:8px; border:none; font-weight:600; cursor:pointer }
-.btn-light{ background:transparent; color:var(--text); border:1px solid var(--border) }
-.btn:hover{ filter:brightness(0.98); transform:translateY(-1px); transition:all .18s ease }
+.btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-light {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+  transition: all 0.18s ease;
+}
 
 /* Utility classes for components that used the old global .btn styles */
-.legacy-btn{ padding:10px 20px; border-radius:6px }
+.legacy-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+}
 
 .over-image-text {
-  color: var(--image-text) !important; 
-  text-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  color: var(--image-text) !important;
+  text-shadow: 0 8px 20px rgba(2, 6, 23, 0.45);
 }
-.over-image-text{ color: var(--image-text) !important; text-shadow: 0 8px 20px rgba(2,6,23,0.45); }
+.over-image-text {
+  color: var(--image-text) !important;
+  text-shadow: 0 8px 20px rgba(2, 6, 23, 0.45);
+}

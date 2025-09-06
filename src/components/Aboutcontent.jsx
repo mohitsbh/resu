@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Typography, Box, Grid } from "@mui/material";
-import { FaUserTie, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaEnvelope, FaReact, FaJsSquare, FaCss3Alt, FaFigma, FaDatabase } from "react-icons/fa";
+import { FaUserTie, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaEnvelope, FaReact, FaJsSquare, FaCss3Alt, FaFigma, FaDatabase, FaHtml5, FaNodeJs, FaBootstrap, FaPython } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiTensorflow, SiC, SiPython } from "react-icons/si";
 import "./Aboutcontent.css";
+import mohit_profile from "../assets/mohit_profile.jpg";
+import { CgEnter } from "react-icons/cg";
 
 const Aboutcontent = () => {
   const certificates = [
@@ -24,12 +27,12 @@ const Aboutcontent = () => {
           <Box className="profile-card">
             <div className="avatar">
               {/* Circular avatar — using initials */}
-              <div className="initials">MB</div>
+              <div className="initials"><img src={mohit_profile}  alt="" /></div>
             </div>
             <div className="profile-body">
-              <Typography variant="h4" className="profile-title"><FaUserTie className="icon-inline" /> Who Am I?</Typography>
+              <Typography variant="h4" className="profile-title"> Who Am I?</Typography>
               <Typography variant="body1" className="profile-text">
-                I'm an AI & Data Science student (3rd year) who loves front-end engineering. I build user-friendly,
+                I'm an AI & Data Science student (4th year) who loves front-end engineering. I build user-friendly,
                 responsive interfaces and enjoy solving problems with clean UI and performant code.
               </Typography>
               <Typography variant="body2" className="profile-text muted">
@@ -42,7 +45,7 @@ const Aboutcontent = () => {
                 <a href="/src/Documents/mohit_resume.pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
                   <Button variant="outlined">Resume</Button>
                 </a>
-                <a href="mailto:youremail@example.com" style={{ marginLeft: 10 }} aria-label="Email">
+                <a href="mailto:msbhosale003@gmail.com" style={{ marginLeft: 10 }} aria-label="Email">
                   <Button variant="text" startIcon={<FaEnvelope />}>Email</Button>
                 </a>
               </div>
@@ -52,33 +55,62 @@ const Aboutcontent = () => {
 
         {/* Right Section - visual/summary or badges */}
         <Grid item xs={12} md={5}>
-          <Typography variant="h4" textAlign="center" className="section-title">Skills & Technologies</Typography>
-          <div className="skill-badges">
+          <Typography variant="h4" textAlign="center" className="section-title" alignItems={"center"}>Skills & Technologies</Typography>
+          <div className="skill-badges" style={{ marginTop: '16px' }}>
 
-
-            <a className="skill" href="https://reactjs.org" target="_blank" rel="noreferrer noopener" aria-label="React">
-              <div className="skill-icon react"><FaReact /></div>
-              <div className="skill-name">React</div>
+            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer noopener" aria-label="HTML">
+              <div className="skill-icon html"><FaHtml5 /></div>
+              <div className="skill-name">HTML</div>
             </a>
 
-            <a className="skill" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer noopener" aria-label="JavaScript">
-              <div className="skill-icon js"><FaJsSquare /></div>
-              <div className="skill-name">JavaScript</div>
-            </a>
-
-            <a className="skill" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer noopener" aria-label="CSS">
+            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer noopener" aria-label="CSS">
               <div className="skill-icon css"><FaCss3Alt /></div>
               <div className="skill-name">CSS</div>
             </a>
 
-            <a className="skill" href="https://www.figma.com" target="_blank" rel="noreferrer noopener" aria-label="Figma">
-              <div className="skill-icon"><FaFigma /></div>
-              <div className="skill-name">Figma</div>
+            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer noopener" aria-label="JavaScript">
+              <div className="skill-icon js"><FaJsSquare /></div>
+              <div className="skill-name">JavaScript</div>
             </a>
 
-            <a className="skill" href="https://www.tensorflow.org" target="_blank" rel="noreferrer noopener" aria-label="AI and Data">
-              <div className="skill-icon"><FaDatabase /></div>
-              <div className="skill-name">AI / Data</div>
+            <a className="skill icon-only" href="https://reactjs.org" target="_blank" rel="noreferrer noopener" aria-label="React">
+              <div className="skill-icon react"><FaReact /></div>
+              <div className="skill-name">React</div>
+            </a>
+
+            <a className="skill icon-only" href="https://www.mongodb.com" target="_blank" rel="noreferrer noopener" aria-label="MongoDB">
+              <div className="skill-icon mongo"><SiMongodb /></div>
+              <div className="skill-name">MongoDB</div>
+            </a>
+
+            <a className="skill icon-only" href="https://expressjs.com" target="_blank" rel="noreferrer noopener" aria-label="Express">
+              <div className="skill-icon express"><SiExpress /></div>
+              <div className="skill-name">Express</div>
+            </a>
+
+            <a className="skill icon-only" href="https://nodejs.org" target="_blank" rel="noreferrer noopener" aria-label="Node.js">
+              <div className="skill-icon node"><FaNodeJs /></div>
+              <div className="skill-name">Node.js</div>
+            </a>
+
+            <a className="skill icon-only" href="https://www.tensorflow.org" target="_blank" rel="noreferrer noopener" aria-label="Machine Learning">
+              <div className="skill-icon ml"><SiTensorflow /></div>
+              <div className="skill-name">Machine Learning</div>
+            </a>
+
+            <a className="skill icon-only" href="https://www.python.org" target="_blank" rel="noreferrer noopener" aria-label="Python">
+              <div className="skill-icon python"><SiPython /></div>
+              <div className="skill-name">Python</div>
+            </a>
+
+            <a className="skill icon-only" href="https://en.cppreference.com/w/" target="_blank" rel="noreferrer noopener" aria-label="C">
+              <div className="skill-icon c"><SiC /></div>
+              <div className="skill-name">C</div>
+            </a>
+
+            <a className="skill icon-only" href="https://getbootstrap.com" target="_blank" rel="noreferrer noopener" aria-label="Bootstrap">
+              <div className="skill-icon bootstrap"><FaBootstrap /></div>
+              <div className="skill-name">Bootstrap</div>
             </a>
           </div>
         </Grid>

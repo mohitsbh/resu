@@ -57,6 +57,58 @@
   line-height: 1.6; /* Improved readability */
 }
 
+/* Meta area (category tag) */
+.pro-meta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pro-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: white;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Small decorative dot/icon before text */
+.pro-category::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Category variants using data-cat attribute */
+.pro-category[data-cat="Internship"] {
+  background: linear-gradient(90deg, #2563eb, #3b82f6); /* blue */
+}
+.pro-category[data-cat="Personal"] {
+  background: linear-gradient(90deg, #06b6d4, #7c3aed); /* teal -> purple */
+}
+.pro-category[data-cat="Client"] {
+  background: linear-gradient(90deg, #f59e0b, #ef4444); /* amber -> red */
+}
+.pro-category[data-cat="Other"] {
+  background: linear-gradient(90deg, #64748b, #94a3b8); /* slate */
+}
+
+/* Make the small dot match the gradient by using a semi-transparent overlay */
+.pro-category[data-cat]::before {
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 2px 6px rgba(2,6,23,0.18) inset;
+}
+
+
 /* Button Container */
 .pro-buttons {
   display: flex;

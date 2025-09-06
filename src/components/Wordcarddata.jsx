@@ -1,5 +1,5 @@
 import todo from "../assets/todo.jpg";
-import construction from "../assets/construction.jpg";
+import construction from "../assets/construction.png"
 import dynamic from "../assets/dynamic-ui.jpg";
 import popup from "../assets/popup.png";
 import web_gallery from "../assets/web-gallery.png";
@@ -48,7 +48,7 @@ const Wordcarddata = [
     title: "Construction UI",
     info: "This is a user interface of a construction website with projects, services, and contact sections.",
     category: "Client",
-    viewLink: "https://construction-u.netlify.app/",
+    viewLink: "https://construction-ak.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/construction-ak",
   },
   {

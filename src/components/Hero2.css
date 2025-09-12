@@ -1,8 +1,16 @@
 .hero2 {
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   position: relative;
+  transition: background 0.3s ease;
+}
+
+body.dark .hero2 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body.light .hero2 {
+  background: rgba(240, 245, 250, 0.5);
 }
 
 .hero2::before {
@@ -16,6 +24,15 @@
   top: 0;
   left: 0;
   z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+body.dark .hero2::before {
+  opacity: 0.9;
+}
+
+body.light .hero2::before {
+  opacity: 0.8;
 }
 
 .heading {
@@ -30,7 +47,15 @@
 .hero2 h1 {
   font-size: 2.4rem;
   color: var(--image-text);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark .hero2 h1 {
   text-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+
+body.light .hero2 h1 {
+  text-shadow: 0 8px 20px rgba(240,245,250,0.45);
 }
 
 .hero2 p {
@@ -38,6 +63,7 @@
   text-align: center;
   color: var(--image-text);
   opacity: 0.94;
+  transition: color 0.3s ease;
 }
 
 @media screen and (max-width: 640px) {

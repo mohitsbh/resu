@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg); /* Use theme variable for background */
+  color: var(--text); /* Use theme variable for text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper spacing between sections */
+section {
+  scroll-margin-top: 70px; /* Adjust based on navbar height */
+  background-color: var(--bg); /* Use theme variable for section backgrounds */
+  color: var(--text); /* Use theme variable for section text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific styling */
+body.light .home-container {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.dark .home-container {
+  background-color: var(--bg);
+  color: var(--text);
+}

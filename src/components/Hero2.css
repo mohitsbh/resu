@@ -1,16 +1,37 @@
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .hero2 {
   width: 100%;
   height: 100vh;
   position: relative;
   transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 body.dark .hero2 {
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(100, 181, 246, 0.1) 50%,
+    rgba(0, 0, 0, 0.7) 100%);
 }
 
 body.light .hero2 {
-  background: rgba(240, 245, 250, 0.5);
+  background: linear-gradient(135deg, 
+    rgba(240, 245, 250, 0.6) 0%,
+    rgba(100, 181, 246, 0.1) 50%,
+    rgba(240, 245, 250, 0.7) 100%);
 }
 
 .hero2::before {
@@ -24,7 +45,7 @@ body.light .hero2 {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
 body.dark .hero2::before {
@@ -35,6 +56,10 @@ body.light .hero2::before {
   opacity: 0.8;
 }
 
+.hero2:hover::before {
+  transform: scale(1.05);
+}
+
 .heading {
   width: 100%;
   height: 100%;
@@ -42,32 +67,60 @@ body.light .hero2::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  animation: fadeInScale 0.8s ease-out;
 }
 
 .hero2 h1 {
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 6vw, 3.2rem);
   color: var(--image-text);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  animation: fadeInScale 0.8s ease-out 0.1s both;
+}
+
+.hero2 h1 {
+  background: linear-gradient(135deg, 
+    var(--image-text) 0%,
+    rgba(255, 213, 79, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 body.dark .hero2 h1 {
-  text-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  text-shadow: 0 8px 20px rgba(2, 6, 23, 0.45);
+  filter: drop-shadow(0 6px 15px rgba(255, 213, 79, 0.2));
 }
 
 body.light .hero2 h1 {
-  text-shadow: 0 8px 20px rgba(240,245,250,0.45);
+  text-shadow: 0 8px 20px rgba(240, 245, 250, 0.45);
+}
+
+.hero2 h1:hover {
+  transform: scale(1.05);
 }
 
 .hero2 p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
   text-align: center;
   color: var(--image-text);
-  opacity: 0.94;
-  transition: color 0.3s ease;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+  max-width: 90%;
+  line-height: 1.6;
+  animation: fadeInScale 0.8s ease-out 0.2s both;
 }
 
 @media screen and (max-width: 640px) {
   .hero2 h1 {
     font-size: 2rem;
+  }
+  
+  .hero2 p {
+    font-size: 1rem;
   }
 }

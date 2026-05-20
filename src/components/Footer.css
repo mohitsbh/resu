@@ -1,57 +1,111 @@
 .site-footer {
   width: 100%;
   padding: 48px 24px 28px 24px;
-  background-color: var(--footer-bg);
+  background: linear-gradient(180deg, 
+    var(--footer-bg) 0%,
+    rgba(100, 181, 246, 0.05) 100%);
   color: var(--text);
+  border-top: 2px solid rgba(100, 181, 246, 0.2);
 }
+
 .site-footer .footer-brand {
   padding: 8px;
 }
+
 .site-footer .footer-links {
   padding: 8px;
 }
+
 .site-footer .footer-contact {
   padding: 8px;
 }
+
 .site-footer .footer-link {
   color: var(--text);
   text-decoration: none;
-  opacity: 0.95;
-  transition: all 0.18s ease;
+  opacity: 0.85;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  display: inline-block;
 }
+
+.site-footer .footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+  transition: width 0.3s ease;
+}
+
 .site-footer .footer-link:hover {
   color: var(--accent);
   transform: translateX(4px);
 }
+
+.site-footer .footer-link:hover::after {
+  width: 100%;
+}
+
 .site-footer .footer-line {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 8px;
 }
+
 .site-footer .footer-icon {
   color: var(--icon-color);
   font-size: 1.25rem;
+  transition: all 0.3s ease;
 }
+
+.site-footer .footer-link:hover .footer-icon {
+  color: var(--accent);
+}
+
 .site-footer .social-row .social-btn {
   color: var(--icon-color);
-  transition: all 0.22s ease;
-  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid rgba(100, 181, 246, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .site-footer .social-row .social-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(43, 155, 244, 0.12);
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(100, 181, 246, 0.25);
   color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(100, 181, 246, 0.1);
 }
 
 .site-footer .certs {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.site-footer .certs img {
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.site-footer .certs img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(100, 181, 246, 0.3);
 }
 
 .footer-bottom {
   margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(100, 181, 246, 0.15);
 }
 
 @media screen and (max-width: 720px) {

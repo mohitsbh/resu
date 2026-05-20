@@ -3,58 +3,94 @@
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ensures better responsiveness */
-  gap: 24px; /* Slightly larger gap for improved spacing */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures better responsiveness */
+  gap: 28px; /* Larger gap for improved spacing */
   padding: 2rem 1rem; /* Adjusts padding for better layout on smaller screens */
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Card Styling */
 .project-card {
-  background: var(--panel); /* themed panel */
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(100, 181, 246, 0.03) 100%);
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(100, 181, 246, 0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
   display: flex; /* Makes the card a flex container */
   flex-direction: column; /* Stacks children vertically */
   align-items: center; /* Centers children horizontally */
   justify-content: space-between; /* Adjusts spacing between content */
+  animation: slideInUp 0.6s ease-out;
 }
 
 .project-card:hover {
-  transform: translateY(-6px); /* Slightly elevated effect */
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25); /* Subtle hover shadow for better interaction feedback */
+  transform: translateY(-12px) scale(1.02); /* Elevated + slight scale effect */
+  box-shadow: 0px 16px 40px rgba(100, 181, 246, 0.25); /* Enhanced hover shadow */
+  border-color: rgba(100, 181, 246, 0.5);
 }
 
 /* Image Styling */
 .project-card img {
   width: 100%; /* Ensures the image takes up the full width of the container */
-  height: 200px; /* Uniform height for all images */
+  height: 220px; /* Uniform height for all images */
   object-fit: cover; /* Maintains aspect ratio and fills the container */
-  border-radius: 8px; /* Rounded edges for a modern look */
+  border-radius: 12px; /* Rounded edges for a modern look */
   margin-bottom: 1rem;
   display: block; /* Ensures the image is a block element */
   margin-left: auto; /* Horizontally centers the image */
   margin-right: auto; /* Horizontally centers the image */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
 }
 
 /* Title Styling */
 .pro-title {
   color: var(--text);
-  margin: 0.5rem 0 1rem;
-  font-size: 1.4rem;
-  font-weight: 600;
+  margin: 0.75rem 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .pro-title {
+  color: var(--accent);
 }
 
 /* Description Styling */
 .pro-info {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 1.5rem;
-  text-align: justify;
-  line-height: 1.6; /* Improved readability */
+  text-align: center;
+  line-height: 1.7;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .pro-info {
+  opacity: 1;
 }
 
 /* Meta area (category tag) */
@@ -69,14 +105,26 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.35rem 0.75rem;
+  padding: 0.5rem 1rem;
   font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 999px;
+  font-weight: 700;
+  border-radius: 50px;
   color: white;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  background: linear-gradient(135deg, 
+    rgba(100, 181, 246, 0.4) 0%,
+    rgba(100, 181, 246, 0.15) 100%);
+  border: 1px solid rgba(100, 181, 246, 0.5);
+  box-shadow: 0 6px 18px rgba(100, 181, 246, 0.15);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .pro-category {
+  background: linear-gradient(135deg, 
+    rgba(100, 181, 246, 0.5) 0%,
+    rgba(100, 181, 246, 0.25) 100%);
+  border-color: rgba(100, 181, 246, 0.7);
 }
 
 /* Small decorative dot/icon before text */

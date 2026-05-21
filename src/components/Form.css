@@ -2,15 +2,15 @@
 .contact-section {
   padding: 2.5rem;
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(100, 181, 246, 0.03) 100%);
+    rgba(0, 212, 255, 0.08) 0%,
+    rgba(0, 99, 204, 0.04) 100%);
   text-align: center;
   max-width: 800px;
   margin: auto;
   color: var(--text);
   border-radius: 16px;
-  border: 2px solid rgba(100, 181, 246, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
 }
 
 .contact-section h2 {
@@ -34,9 +34,9 @@
 .contact-form textarea {
   padding: 1rem 1.2rem;
   font-size: 1rem;
-  border: 2px solid rgba(100, 181, 246, 0.3);
+  border: 2px solid rgba(0, 212, 255, 0.3);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 212, 255, 0.05);
   color: var(--text);
   font-family: inherit;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -51,9 +51,9 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
 }
 
 .contact-form textarea {
@@ -64,14 +64,14 @@
 .contact-form button {
   padding: 1.1rem 2rem;
   font-size: 1.05rem;
-  background: linear-gradient(135deg, var(--accent) 0%, #42a5f5 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: 700;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -92,8 +92,8 @@
 }
 
 .contact-form button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(100, 181, 246, 0.45);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 50px rgba(0, 212, 255, 0.6);
 }
 
 .contact-form button:active {

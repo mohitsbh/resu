@@ -1,6 +1,6 @@
 import React from "react";
 import resumeImage from "../assets/resume.jpg";
-import resumePdf from "../Documents/MohitShankar Bhosale_InternshalaResume (2).pdf";
+import resumePdf from "../Documents/Mohit_resume (1).pdf";
 import "./Resume.css";
 import Navbar from "./Navbar";
 

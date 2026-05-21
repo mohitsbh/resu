@@ -31,16 +31,46 @@ import yourtube from "../assets/yourtube.png"
 import popex from "../assets/popex.png"
 import abrod from "../assets/abrod.png"
 import studentdashboard from "../assets/studentdashboard.png"
+import fakenews from "../assets/fake-news-detection.png"
+import emotion from "../assets/emotion-music.png"
 
 const Wordcarddata = [
   {
-    id: 1,
-    imgsrc: todo,
-    title: "To Do List",
-    info: "This is To Do List Web App. This is helpful for managing multi tasks in our time.",
-    category: "Personal",
-    viewLink: "https://to-do-list-wa.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/todo-app",
+    id: 33,
+    imgsrc: fakenews,
+    title: "Fake News Detection",
+    info: "This is College Final Year Project.",
+    category: "Ai Project",
+    viewLink: "https://huggingface.co/spaces/msbhosale003/fn_detection",
+    sourceLink: "https://huggingface.co/spaces/msbhosale003/fn_detection/tree/main",
+  },
+  {
+    id: 34,
+    imgsrc: emotion,
+    title: "Emotion Based Music Player",
+    info: "This is College Third Year Project.",
+    category: "Ai Project",
+    viewLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes",
+    sourceLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes/tree/main",
+  },
+  {
+    id: 29,
+    imgsrc: yourtube,
+    title: "Full Stack Youtube Clone",
+    info: "This is NullClass Internship Project.",
+    category: "Internship",
+    viewLink: "https://youtube-frontend-jade.vercel.app/",
+    sourceLink: "https://github.com/mohitsbh/youtube_frontend",
+  },
+
+  {
+    id: 17,
+    imgsrc: paint,
+    title: "Gurukrupa Paints",
+    info: "This website created for my client.",
+    category: "Client",
+    viewLink: "https://gurukrupapaints.netlify.app/",
+    sourceLink: "https://github.com/mohitsbh/gurukrupa/tree/main/paint",
   },
   {
     id: 2,
@@ -50,6 +80,15 @@ const Wordcarddata = [
     category: "Client",
     viewLink: "https://construction-ak.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/construction-ak",
+  },
+  {
+    id: 1,
+    imgsrc: todo,
+    title: "To Do List",
+    info: "This is To Do List Web App. This is helpful for managing multi tasks in our time.",
+    category: "Personal",
+    viewLink: "https://to-do-list-wa.netlify.app/",
+    sourceLink: "https://github.com/mohitsbh/todo-app",
   },
   {
     id: 3,
@@ -178,15 +217,7 @@ const Wordcarddata = [
     viewLink: "https://audio-extraction.vercel.app/",
     sourceLink: "https://github.com/mohitsbh/audio-extraction",
   }
-  , {
-    id: 17,
-    imgsrc: paint,
-    title: "Gurukrupa Paints",
-    info: " This website created for my client.",
-    category: "Client",
-    viewLink: "https://gurukrupapaints.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/gurukrupa/tree/main/paint",
-  }
+
   , {
     id: 18,
     imgsrc: currencycn,
@@ -319,7 +350,7 @@ const Wordcarddata = [
     category: "Internship",
     viewLink: "https://stu-m.vercel.app/students",
     sourceLink: "https://github.com/mohitsbh/stu_m",
-  }
-];
+  },
+ ];
 
 export default Wordcarddata;

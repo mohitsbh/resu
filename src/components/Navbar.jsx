@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaHome, FaProjectDiagram, FaUser, FaEnvelope, FaFileAlt } from "react-icons/fa";
-// import Resume from "../assets/resume.jpg";
-import Resume from "./Resume";
+import resumePdf from "../Documents/Mohit_resume (1).pdf";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
         </li>
 
         <li className="resume">
-          <Link to="/Resume">Resume</Link>
+          <a href={resumePdf} download="Mohit_resume.pdf">Resume</a>
         </li>
       </ul>
 
@@ -71,9 +70,9 @@ const Navbar = () => {
         <Link to="/contact" title="Contact" aria-label="Contact">
           <FaEnvelope />
         </Link>
-        <Link to="/Resume" title="Resume" aria-label="Resume">
+        <a href={resumePdf} download="Mohit_resume.pdf" title="Resume" aria-label="Resume">
           <FaFileAlt />
-        </Link>
+        </a>
         <div className="side-toggle" title="Toggle theme" aria-hidden="true">
           <ThemeToggle />
         </div>

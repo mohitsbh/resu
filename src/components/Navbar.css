@@ -1,5 +1,5 @@
 .header {
-  display: none; /* Header hidden — using right-side nav only */
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
@@ -20,7 +20,7 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   transition: all 0.3s ease;
 }
 
@@ -61,7 +61,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+  background: var(--gradient-main);
   transition: width 0.3s ease;
 }
 
@@ -76,44 +76,48 @@
 }
 
 .hamburger {
-  display: none; /* Hide by default */
+  display: none;
 }
 
-/* Side nav (desktop only) */
 .side-nav {
   position: fixed;
-  right: 18px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, rgba(15, 26, 53, 0.85) 0%, rgba(0, 30, 60, 0.85) 100%);
+  background: rgba(13, 21, 41, 0.8);
   padding: 12px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   z-index: 120;
-  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.25), 
-              inset 0 1px 0 rgba(0, 212, 255, 0.1);
-  border: 2px solid rgba(0, 212, 255, 0.3);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  transition: transform 0.3s ease, 
-              box-shadow 0.3s ease, 
-              background-color 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+body.light .side-nav {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(99, 102, 241, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .side-nav:hover {
-  box-shadow: 0 25px 70px rgba(0, 212, 255, 0.4),
-              inset 0 1px 0 rgba(0, 212, 255, 0.15);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 rgba(129, 140, 248, 0.15);
 }
 
 .side-nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  color: var(--icon-color);
+  width: 48px;
+  height: 48px;
+  color: var(--muted);
   border-radius: 12px;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               box-shadow 0.3s ease,
@@ -123,26 +127,11 @@
   position: relative;
 }
 
-.side-nav a::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.4) 0%, rgba(0, 153, 255, 0.1) 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.side-nav a:hover::before {
-  opacity: 1;
-}
-
 .side-nav a:hover {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25) 0%, rgba(0, 153, 255, 0.1) 100%);
-  transform: translateY(-8px) scale(1.1);
-  color: #00d4ff;
-  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4);
+  background: rgba(129, 140, 248, 0.12);
+  transform: translateY(-4px) scale(1.05);
+  color: var(--accent);
+  box-shadow: 0 8px 25px rgba(129, 140, 248, 0.2);
 }
 
 .side-nav a:active {
@@ -154,12 +143,31 @@
   outline-offset: 4px;
 }
 
+.side-nav a.active {
+  background: linear-gradient(135deg, rgba(129, 140, 248, 0.2), rgba(167, 139, 250, 0.1));
+  color: var(--accent);
+  box-shadow: 0 8px 25px rgba(129, 140, 248, 0.25);
+}
+
+.side-nav a.active::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: var(--gradient-main);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(129, 140, 248, 0.5);
+}
+
 .side-nav .side-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
@@ -174,19 +182,18 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  color: var(--icon-color);
+  color: var(--muted);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .side-nav .side-toggle:hover {
   transform: translateY(-4px);
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 153, 255, 0.1) 100%);
-  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+  background: rgba(129, 140, 248, 0.1);
+  box-shadow: 0 8px 25px rgba(129, 140, 248, 0.2);
 }
 
 @media screen and (max-width: 768px) {
-  /* On mobile hide the top nav/menu and show only the bottom icon bar */
   .nav-menu {
     display: none !important;
   }
@@ -195,36 +202,36 @@
     display: none !important;
   }
 
-  /* Ensure header remains hidden */
   .header {
     display: none;
   }
 
-  /* Show side-nav as a bottom-centered icon-only action bar */
   .side-nav {
     display: flex;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 14px;
+    bottom: 16px;
     top: auto;
     right: auto;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border-radius: 50px;
     flex-direction: row;
-    gap: 8px;
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(100, 181, 246, 0.05) 100%);
-    box-shadow: 0 12px 40px rgba(100, 181, 246, 0.25);
+    gap: 6px;
+    background: rgba(13, 21, 41, 0.9);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
     z-index: 40;
-    border: 2px solid rgba(100, 181, 246, 0.3);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+  }
+
+  body.light .side-nav {
+    background: rgba(255, 255, 255, 0.9);
   }
 
   .side-nav a,
   .side-nav .side-toggle {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -232,15 +239,23 @@
 
   .side-nav a svg,
   .side-nav .side-toggle svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   .side-nav a:hover {
-    transform: translateY(-6px) scale(1.1);
+    transform: translateY(-4px) scale(1.05);
   }
 
-  /* Respect safe area on modern phones */
+  .side-nav a.active::after {
+    right: auto;
+    left: 50%;
+    top: -3px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+  }
+
   .side-nav {
     padding-bottom: calc(8px + env(safe-area-inset-bottom));
   }

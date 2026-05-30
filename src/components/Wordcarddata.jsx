@@ -1,6 +1,5 @@
 import todo from "../assets/todo.jpg";
 import construction from "../assets/construction.png"
-import dynamic from "../assets/dynamic-ui.jpg";
 import popup from "../assets/popup.png";
 import web_gallery from "../assets/web-gallery.png";
 import notes from "../assets/notes-ui.png";
@@ -13,15 +12,11 @@ import persnolftracker from "../assets/persnol-f-tracker.png"
 import usermanagement from "../assets/usermanagement.png"
 import calc from "../assets/calc.png"
 import weatherweb from "../assets/weather-web.png"
-import resume from "../assets/MohitBhosale.pdf"
 import AudioExtraction from "../assets/audio-extractor.png"
 import paint from "../assets/paint.png"
 import currencycn from "../assets/currencycn.png"
-import snake from "../assets/snake.png"
 import analogclock from "../assets/analogclock.png"
-import solar from "../assets/solar.png"
 import eventcal from "../assets/eventcal.png"
-import hashtag from "../assets/hashtag.png"
 import weatherreact from "../assets/weather-react.png"
 import bgchanger from "../assets/bgchanger.png"
 import galleryreact from "../assets/gallery-react.png"
@@ -35,322 +30,36 @@ import fakenews from "../assets/fake-news-detection.png"
 import emotion from "../assets/emotion-music.png"
 
 const Wordcarddata = [
-  {
-    id: 33,
-    imgsrc: fakenews,
-    title: "Fake News Detection",
-    info: "This is College Final Year Project.",
-    category: "Ai Project",
-    viewLink: "https://huggingface.co/spaces/msbhosale003/fn_detection",
-    sourceLink: "https://huggingface.co/spaces/msbhosale003/fn_detection/tree/main",
-  },
-  {
-    id: 34,
-    imgsrc: emotion,
-    title: "Emotion Based Music Player",
-    info: "This is College Third Year Project.",
-    category: "Ai Project",
-    viewLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes",
-    sourceLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes/tree/main",
-  },
-  {
-    id: 29,
-    imgsrc: yourtube,
-    title: "Full Stack Youtube Clone",
-    info: "This is NullClass Internship Project.",
-    category: "Internship",
-    viewLink: "https://youtube-frontend-jade.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/youtube_frontend",
-  },
-
-  {
-    id: 17,
-    imgsrc: paint,
-    title: "Gurukrupa Paints",
-    info: "This website created for my client.",
-    category: "Client",
-    viewLink: "https://gurukrupapaints.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/gurukrupa/tree/main/paint",
-  },
-  {
-    id: 2,
-    imgsrc: construction,
-    title: "Construction UI",
-    info: "This is a user interface of a construction website with projects, services, and contact sections.",
-    category: "Client",
-    viewLink: "https://construction-ak.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/construction-ak",
-  },
-  {
-    id: 1,
-    imgsrc: todo,
-    title: "To Do List",
-    info: "This is To Do List Web App. This is helpful for managing multi tasks in our time.",
-    category: "Personal",
-    viewLink: "https://to-do-list-wa.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/todo-app",
-  },
-  {
-    id: 3,
-    imgsrc: dynamic,
-    title: "Dynamic UI",
-    info: "This is a beautiful dynamic UI website with stunning visuals.",
-    category: "Personal",
-    viewLink: "https://meet-u.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/dynamic-ui",
-  },
-  {
-    id: 4,
-    imgsrc: popup,
-    title: "POPUP Message UI",
-    info: "This is poup message UI.",
-    category: "Personal",
-    viewLink: "https://pop-up-1.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/popup",
-  },
-  {
-    id: 5,
-    imgsrc: web_gallery,
-    title: "WEB GALLERY",
-    info: " This is beutiful Web Gallery UI website. With some images.",
-    category: "Personal",
-    viewLink: "https://web-gallery-1.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/web-gallery",
-  },
-  {
-    id: 6,
-    imgsrc: notes,
-    title: "Notes Web App",
-    info: "This is beautiful Notes web app. Create and delete notes.save in localstorage",
-    category: "Personal",
-    viewLink: "https://notes-webapp-1.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/notes-web",
-  },
-  {
-    id: 7,
-    imgsrc: edusity,
-    title: "Edusity clone website",
-    info: " This is Edusity Clone Website. This is made for better experince and also use for colleges for representation.",
-    category: "Personal",
-    viewLink: "https://edusity-five-bay.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/edusity",
-  },
-
-  {
-    id: 8,
-    imgsrc: justice,
-    title: "Justice For Sport",
-    info: "This Website is made for my client.",
-    category: "Client",
-    viewLink: "https://peaceful-sprinkles-3709b3.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/justice-for-sport",
-  },
-  {
-    id: 9,
-    imgsrc: weatherimg,
-    title: "Weather Project",
-    info: "This Website is made for get a internship.",
-    category: "Internship",
-    viewLink: "https://weather-web-ap.netlify.app/dashboard",
-    sourceLink: "https://github.com/mohitsbh/",
-  },
-  {
-    id: 10,
-    imgsrc: todo_img,
-    title: "To-Do-List",
-    info: "This Website is my internship project with Learntricks.",
-    category: "Internship",
-    viewLink: "https://todolist-project-2.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/",
-  },
-  {
-    id: 11,
-    imgsrc: youtube_img,
-    title: "Youtube clone",
-    info: " This Website is made for improve skills of React.",
-    category: "Internship",
-    viewLink: "https://notes-webapp-1.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/",
-  },
-  {
-    id: 12,
-    imgsrc: persnolftracker,
-    title: "Persnol Finance Tracker",
-    info: " This Website is my internship project.",
-    category: "Internship",
-    viewLink: "https://persnol-finance-tracker.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/persnol-finance-tracker",
-  },
-  {
-    id: 13,
-    imgsrc: usermanagement,
-    title: "User Management System",
-    info: " This Website is my internship project.",
-    category: "Internship",
-    viewLink: "https://usermanagement-indol.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/userManagement/",
-  },
-  {
-    id: 14,
-    imgsrc: calc,
-    title: "Calculator",
-    info: " This Website is my simple javascript lerning project.",
-    category: "Personal",
-    viewLink: "https://stately-licorice-b0931a.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/",
-  },
-  {
-    id: 15,
-    imgsrc: weatherweb,
-    title: "Weather",
-    info: "This Website is my simple javascript lerning project with api integration.",
-    category: "Personal",
-    viewLink: "https://timely-gelato-e21700.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/",
-  }
-  , {
-    id: 16,
-    imgsrc: AudioExtraction,
-    title: "Audio Extractor",
-    info: " This is My Internship Project.",
-    category: "Internship",
-    viewLink: "https://audio-extraction.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/audio-extraction",
-  }
-
-  , {
-    id: 18,
-    imgsrc: currencycn,
-    title: "Currency Converter",
-    info: "This Website is my simple javascript lerning project with api integration.",
-    category: "Personal",
-    viewLink: "https://currencycn.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/Currency-converter-",
-  }
-  , {
-    id: 19,
-    imgsrc: snake,
-    title: "Snake And Apple",
-    info: "This Website is my simple javascript lerning project.",
-    category: "Personal",
-    viewLink: "https://snake-and-apple.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/Snake-and-Apple-",
-  }
-  , {
-    id: 20,
-    imgsrc: analogclock,
-    title: "Analog Clock",
-    info: "This Website is my simple javascript lerning project.",
-    category: "Personal",
-    viewLink: "https://analog-clock-v1.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/Analog-Clock",
-  }
-  , {
-    id: 21,
-    imgsrc: solar,
-    title: "Solar System",
-    info: "This Website is my simple javascript lerning project.",
-    category: "Personal",
-    viewLink: "https://so-l-ar.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/Solar",
-  }
-  , {
-    id: 22,
-    imgsrc: eventcal,
-    title: "Event Calender",
-    info: "This is my Internship project.",
-    category: "Internship",
-    viewLink: "https://eventrrrtf.netlify.a",
-    sourceLink: "https://github.com/mohitsbh/eventcalendar",
-  }
-  , {
-    id: 23,
-    imgsrc: hashtag,
-    title: "Hashtag Generator",
-    info: "This is my Internship project.",
-    category: "Internship",
-    viewLink: "https://github.com/user-attachments/assets/30771072-9a3e-4c59-b4cd-74d3af699691",
-    sourceLink: "https://github.com/mohitsbh/hashtag_gen",
-  }, {
-    id: 24,
-    imgsrc: weatherreact,
-    title: "Weather Forecast",
-    info: "This is my Internship project.",
-    category: "Internship",
-    viewLink: "https://weather-react-rose-delta.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/resu",
-  },
-  {
-    id: 25,
-    imgsrc: bgchanger,
-    title: "Background Changer",
-    info: "This Website is my simple javascript lerning project.",
-    category: "Personal",
-    viewLink: "https://bgchanger-mauve.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/bgchanger",
-  },
-  {
-    id: 26,
-    imgsrc: galleryreact,
-    title: "Image Gallery",
-    info: "This Website is my React Practice project.",
-    category: "Personal",
-    viewLink: "https://gallery-react-five.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/gallery-react",
-  }, {
-    id: 27,
-    imgsrc: netflixclone,
-    title: "Netflix Clone",
-    info: "This Website is my React Practice project.",
-    category: "Internship",
-    viewLink: "https://hhhhvhnbnvh.netlify.app/",
-    sourceLink: "https://github.com/mohitsbh/netflix-clone",
-  },
-  {
-    id: 28,
-    imgsrc: vidcompressor,
-    title: "Video Compressor",
-    info: "This is Javascript Practice project.",
-    category: "Internship",
-    viewLink: "https://video-compressor-8qt3.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/VideoCompressor",
-  },
-  {
-    id: 29,
-    imgsrc: yourtube,
-    title: "Full Stack Youtube Clone",
-    info: "This is NullClass Internship Project.",
-    category: "Internship",
-    viewLink: "https://youtube-frontend-jade.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/youtube_frontend",
-  },
-  {
-    id: 30,
-    imgsrc: popex,
-    title: "Login and Register Page",
-    info: "This is PopEx Internship Assignment Project.",
-    category: "Internship",
-    viewLink: "https://accountcreation.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/accountcreation",
-  },
-  {
-    id: 31,
-    imgsrc: abrod,
-    title: "Abroad Landing Page",
-    info: "This is Internship Assignment Project.",
-    category: "Internship",
-    viewLink: "https://mbbs-abroad.vercel.app/",
-    sourceLink: "https://github.com/mohitsbh/MBBS-Abroad",
-  },
-  {
-    id: 32,
-    imgsrc: studentdashboard,
-    title: "Student Dashboard",
-    info: "This is Internship Assignment Project.",
-    category: "Internship",
-    viewLink: "https://stu-m.vercel.app/students",
-    sourceLink: "https://github.com/mohitsbh/stu_m",
-  },
- ];
+  { id: 33, priority: 1, imgsrc: fakenews, title: "Fake News Detection", info: "College final year project using deep learning to detect fake news from text data with high accuracy.", category: "Ai Project", tech: ["Python", "TensorFlow", "Hugging Face", "NLP"], highlights: ["95% accuracy", "Real-time detection", "Web interface"], viewLink: "https://huggingface.co/spaces/msbhosale003/fn_detection", sourceLink: "https://huggingface.co/spaces/msbhosale003/fn_detection/tree/main" },
+  { id: 34, priority: 2, imgsrc: emotion, title: "Emotion Based Music Player", info: "AI-powered music player that detects user emotion from facial expressions and suggests songs accordingly.", category: "Ai Project", tech: ["Python", "TensorFlow", "OpenCV", "Flask"], highlights: ["Facial emotion detection", "Dynamic playlist", "Real-time inference"], viewLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes", sourceLink: "https://huggingface.co/spaces/msbhosale003/EmotionTunes/tree/main" },
+  { id: 29, priority: 3, imgsrc: yourtube, title: "Full Stack Youtube Clone", info: "Feature-rich video platform clone with user authentication, video upload, comments, likes and subscriptions.", category: "Internship", tech: ["React", "Node.js", "MongoDB", "JWT"], highlights: ["Auth system", "Video streaming", "Like/comment/subscribe"], viewLink: "https://youtube-frontend-jade.vercel.app/", sourceLink: "https://github.com/mohitsbh/youtube_frontend" },
+  { id: 28, priority: 4, imgsrc: vidcompressor, title: "Video Compressor", info: "Browser-based video compression tool that reduces file size while maintaining quality using FFmpeg.", category: "Internship", tech: ["JavaScript", "FFmpeg", "WebAssembly", "React"], highlights: ["60% size reduction", "Quality presets", "Batch processing"], viewLink: "https://video-compressor-8qt3.vercel.app/", sourceLink: "https://github.com/mohitsbh/VideoCompressor" },
+  { id: 13, priority: 5, imgsrc: usermanagement, title: "User Management System", info: "Full-stack CRUD application for managing users with roles, permissions, and activity logging.", category: "Internship", tech: ["React", "Node.js", "MongoDB", "Express"], highlights: ["Role-based access", "Activity logs", "Password hashing"], viewLink: "https://usermanagement-indol.vercel.app/", sourceLink: "https://github.com/mohitsbh/userManagement/" },
+  { id: 16, priority: 6, imgsrc: AudioExtraction, title: "Audio Extractor", info: "Online tool to extract audio from video files with format conversion and quality options.", category: "Internship", tech: ["React", "FFmpeg", "Web API", "JavaScript"], highlights: ["Multiple formats", "Quality control", "Fast processing"], viewLink: "https://audio-extraction.vercel.app/", sourceLink: "https://github.com/mohitsbh/audio-extraction" },
+  { id: 27, priority: 7, imgsrc: netflixclone, title: "Netflix Clone", info: "Netflix-inspired streaming UI with responsive design, category filtering, and movie info modals.", category: "Internship", tech: ["React", "SCSS", "TMDB API", "Responsive"], highlights: ["Responsive UI", "Movie categories", "Search & filter"], viewLink: "https://hhhhvhnbnvh.netlify.app/", sourceLink: "https://github.com/mohitsbh/netflix-clone" },
+  { id: 32, priority: 8, imgsrc: studentdashboard, title: "Student Dashboard", info: "Analytics dashboard for tracking student performance with charts, attendance, and grade management.", category: "Internship", tech: ["React", "Chart.js", "Node.js", "MongoDB"], highlights: ["Performance charts", "Attendance tracking", "Grade management"], viewLink: "https://stu-m.vercel.app/students", sourceLink: "https://github.com/mohitsbh/stu_m" },
+  { id: 12, priority: 9, imgsrc: persnolftracker, title: "Personal Finance Tracker", info: "Track income, expenses and savings with visual charts, categories, and monthly budget planning.", category: "Internship", tech: ["React", "Chart.js", "Node.js", "Express"], highlights: ["Income/expense tracking", "Visual charts", "Budget planning"], viewLink: "https://persnol-finance-tracker.vercel.app/", sourceLink: "https://github.com/mohitsbh/persnol-finance-tracker" },
+  { id: 30, priority: 10, imgsrc: popex, title: "Login & Register System", info: "Secure authentication system with JWT tokens, password reset, and social login integration.", category: "Internship", tech: ["React", "Node.js", "JWT", "MongoDB"], highlights: ["JWT auth", "Password reset", "Social login"], viewLink: "https://accountcreation.vercel.app/", sourceLink: "https://github.com/mohitsbh/accountcreation" },
+  { id: 31, priority: 11, imgsrc: abrod, title: "Abroad Landing Page", info: "Modern landing page for study abroad consultancy with inquiry forms and program listings.", category: "Internship", tech: ["React", "CSS3", "Responsive", "Form API"], highlights: ["Lead capture form", "Program catalog", "Mobile responsive"], viewLink: "https://mbbs-abroad.vercel.app/", sourceLink: "https://github.com/mohitsbh/MBBS-Abroad" },
+  { id: 17, priority: 12, imgsrc: paint, title: "Gurukrupa Paints", info: "Professional business website for a paint company with product catalog, color visualizer, and contact system.", category: "Client", tech: ["React", "CSS3", "Responsive", "Form API"], highlights: ["Product catalog", "Color visualizer", "Business inquiry"], viewLink: "https://gurukrupapaints.netlify.app/", sourceLink: "https://github.com/mohitsbh/gurukrupa/tree/main/paint" },
+  { id: 2, priority: 13, imgsrc: construction, title: "Construction UI", info: "Complete UI for a construction company showcasing projects, services, team profiles, and contact section.", category: "Client", tech: ["React", "CSS3", "Responsive", "Animations"], highlights: ["Project gallery", "Service listings", "Team section"], viewLink: "https://construction-ak.vercel.app/", sourceLink: "https://github.com/mohitsbh/construction-ak" },
+  { id: 8, priority: 14, imgsrc: justice, title: "Justice For Sport", info: "Advocacy website for sports justice with articles, petitions, event calendar and donation integration.", category: "Client", tech: ["React", "CSS3", "JavaScript", "API"], highlights: ["Petition system", "Event calendar", "Donation integration"], viewLink: "https://peaceful-sprinkles-3709b3.netlify.app/", sourceLink: "https://github.com/mohitsbh/justice-for-sport" },
+  { id: 7, priority: 15, imgsrc: edusity, title: "Edusity Clone", info: "University website clone with course listings, faculty profiles, event management, and online admission forms.", category: "Personal", tech: ["React", "CSS3", "Responsive"], highlights: ["Course catalog", "Faculty profiles", "Online admission"], viewLink: "https://edusity-five-bay.vercel.app/", sourceLink: "https://github.com/mohitsbh/edusity" },
+  { id: 9, priority: 16, imgsrc: weatherimg, title: "Weather Dashboard", info: "Interactive weather dashboard with 7-day forecast, hourly data, maps and location-based updates.", category: "Internship", tech: ["React", "Chart.js", "Weather API", "Geolocation"], highlights: ["7-day forecast", "Hourly data", "Location detection"], viewLink: "https://weather-web-ap.netlify.app/dashboard", sourceLink: "https://github.com/mohitsbh/" },
+  { id: 24, priority: 17, imgsrc: weatherreact, title: "Weather Forecast App", info: "Real-time weather application with search, hourly breakdown, and animated weather icons.", category: "Internship", tech: ["React", "API", "CSS3"], highlights: ["City search", "Hourly breakdown", "Weather icons"], viewLink: "https://weather-react-rose-delta.vercel.app/", sourceLink: "https://github.com/mohitsbh/resu" },
+  { id: 1, priority: 18, imgsrc: todo, title: "To Do List", info: "Feature-rich task management app with categories, due dates, drag-and-drop, and local storage persistence.", category: "Personal", tech: ["JavaScript", "HTML", "CSS", "LocalStorage"], highlights: ["Drag & drop", "Due dates", "Categories"], viewLink: "https://to-do-list-wa.netlify.app/", sourceLink: "https://github.com/mohitsbh/todo-app" },
+  { id: 6, priority: 19, imgsrc: notes, title: "Notes Web App", info: "Elegant note-taking app with rich text editing, color coding, search, and auto-save functionality.", category: "Personal", tech: ["JavaScript", "HTML", "CSS", "LocalStorage"], highlights: ["Rich text editor", "Color coding", "Auto-save"], viewLink: "https://notes-webapp-1.netlify.app/", sourceLink: "https://github.com/mohitsbh/notes-web" },
+  { id: 10, priority: 20, imgsrc: todo_img, title: "To-Do-List (Internship)", info: "Internship project showcasing a polished to-do list with team collaboration features.", category: "Internship", tech: ["React", "Node.js", "MongoDB"], highlights: ["Team collaboration", "Task assignment", "Status tracking"], viewLink: "https://todolist-project-2.netlify.app/", sourceLink: "https://github.com/mohitsbh/" },
+  { id: 5, priority: 21, imgsrc: web_gallery, title: "Web Gallery", info: "Responsive image gallery with lightbox view, category filtering, and smooth transitions.", category: "Personal", tech: ["HTML", "CSS", "JavaScript"], highlights: ["Lightbox view", "Category filter", "Smooth transitions"], viewLink: "https://web-gallery-1.netlify.app/", sourceLink: "https://github.com/mohitsbh/web-gallery" },
+  { id: 4, priority: 22, imgsrc: popup, title: "Popup Message UI", info: "Customizable popup notification system with multiple animation styles and auto-dismiss.", category: "Personal", tech: ["JavaScript", "CSS", "HTML"], highlights: ["Multiple animations", "Auto-dismiss", "Customizable"], viewLink: "https://pop-up-1.netlify.app/", sourceLink: "https://github.com/mohitsbh/popup" },
+  { id: 11, priority: 23, imgsrc: youtube_img, title: "Youtube Clone (React)", info: "React-based YouTube clone with video cards, search, and responsive grid layout.", category: "Internship", tech: ["React", "YouTube API", "CSS3"], highlights: ["Video search", "Responsive grid", "API integration"], viewLink: "https://notes-webapp-1.netlify.app/", sourceLink: "https://github.com/mohitsbh/" },
+  { id: 14, priority: 24, imgsrc: calc, title: "Calculator", info: "Sleek calculator app with standard and scientific modes, history log, and keyboard support.", category: "Personal", tech: ["JavaScript", "HTML", "CSS"], highlights: ["Scientific mode", "History log", "Keyboard support"], viewLink: "https://stately-licorice-b0931a.netlify.app/", sourceLink: "https://github.com/mohitsbh/" },
+  { id: 15, priority: 25, imgsrc: weatherweb, title: "Weather Web App", info: "Simple weather app using OpenWeather API with current conditions, humidity, and wind speed.", category: "Personal", tech: ["JavaScript", "OpenWeather API", "CSS"], highlights: ["Current conditions", "Humidity data", "Wind speed"], viewLink: "https://timely-gelato-e21700.netlify.app/", sourceLink: "https://github.com/mohitsbh/" },
+  { id: 18, priority: 26, imgsrc: currencycn, title: "Currency Converter", info: "Real-time currency converter with live exchange rates, conversion history, and 50+ currencies.", category: "Personal", tech: ["JavaScript", "ExchangeRate API", "CSS"], highlights: ["50+ currencies", "Live rates", "Conversion history"], viewLink: "https://currencycn.netlify.app/", sourceLink: "https://github.com/mohitsbh/Currency-converter-" },
+  { id: 20, priority: 27, imgsrc: analogclock, title: "Analog Clock", info: "Beautiful analog clock with customizable themes, multiple time zones, and smooth second hand.", category: "Personal", tech: ["JavaScript", "Canvas", "CSS"], highlights: ["Custom themes", "Time zones", "Smooth animation"], viewLink: "https://analog-clock-v1.netlify.app/", sourceLink: "https://github.com/mohitsbh/Analog-Clock" },
+  { id: 22, priority: 28, imgsrc: eventcal, title: "Event Calendar", info: "Interactive event calendar with create/edit/delete events, monthly view, and reminders.", category: "Internship", tech: ["JavaScript", "HTML", "CSS", "LocalStorage"], highlights: ["Event CRUD", "Monthly view", "Reminders"], viewLink: "https://eventrrrtf.netlify.a", sourceLink: "https://github.com/mohitsbh/eventcalendar" },
+  { id: 25, priority: 29, imgsrc: bgchanger, title: "Background Changer", info: "Fun interactive app to change webpage background with gradient presets and custom colors.", category: "Personal", tech: ["JavaScript", "CSS", "HTML"], highlights: ["Gradient presets", "Custom colors", "Live preview"], viewLink: "https://bgchanger-mauve.vercel.app/", sourceLink: "https://github.com/mohitsbh/bgchanger" },
+  { id: 26, priority: 30, imgsrc: galleryreact, title: "Image Gallery (React)", info: "React-based image gallery with search, masonry layout, and lightbox for full-screen viewing.", category: "Personal", tech: ["React", "CSS3", "Masonry"], highlights: ["Masonry layout", "Search", "Full-screen view"], viewLink: "https://gallery-react-five.vercel.app/", sourceLink: "https://github.com/mohitsbh/gallery-react" },
+];
 
 export default Wordcarddata;

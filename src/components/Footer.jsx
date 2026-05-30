@@ -1,23 +1,21 @@
-import React from "react";
 import { Grid, Box, Typography, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaPhone, FaHome, FaMailBulk, FaFacebook, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaPhone, FaHome, FaMailBulk, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaArrowUp } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <Box className="site-footer" sx={{ borderTop: '1px solid var(--border)',padding: 4, marginTop: 4 }}>
       <Grid container spacing={4} justifyContent="center">
-        {/* Left Footer */}
         <Grid item xs={12} sm={6} textAlign="center">
           <Box className="footer-col">
             <Box className="footer-line">
-              {/* Home icon navigates to contact page */}
               <IconButton component={Link} to="/contact" aria-label="Contact" className="footer-icon-btn">
                 <FaHome className="footer-icon" />
               </IconButton>
               <Box sx={{ marginLeft: 1 }}>
-                {/* Address opens Google Maps */}
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=Thane%2C+Maharashtra%2C+India"
                   target="_blank"
@@ -28,7 +26,6 @@ const Footer = () => {
               </Box>
             </Box>
             <Box className="footer-line">
-              {/* Phone icon initiates a call on supported devices */}
               <IconButton component="a" href="tel:+919833714188" aria-label="Call" className="footer-icon-btn">
                 <FaPhone className="footer-icon" />
               </IconButton>
@@ -37,7 +34,6 @@ const Footer = () => {
               </Typography>
             </Box>
             <Box className="footer-line">
-              {/* Email icon opens Gmail compose window */}
               <IconButton
                 component="a"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=msbhosale003@gmail.com"
@@ -55,7 +51,6 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        {/* Right Footer */}
         <Grid item xs={12} sm={6} textAlign="center" >
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>About Me</Typography>
           <Typography variant="body1" sx={{ marginTop: 2 }}>
@@ -79,7 +74,17 @@ const Footer = () => {
       </Grid>
 
       <Box className="footer-bottom" sx={{ marginTop: 1, paddingTop: 3, textAlign: 'center' }}>
-        <Typography variant="body2">© {new Date().getFullYear()} Mohit Bhosale — Crafted with care.</Typography>
+        <Typography variant="body2">
+          © {new Date().getFullYear()} Mohit Bhosale — Crafted with care.
+        </Typography>
+        <IconButton
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+          className="scroll-top-btn"
+          sx={{ mt: 1 }}
+        >
+          <FaArrowUp />
+        </IconButton>
       </Box>
     </Box>
   );

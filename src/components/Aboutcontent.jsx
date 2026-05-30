@@ -1,189 +1,164 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Typography, Box, Grid } from "@mui/material";
-import { FaUserTie, FaBriefcase, FaCertificate, FaExternalLinkAlt, FaEnvelope, FaReact, FaJsSquare, FaCss3Alt, FaFigma, FaDatabase, FaHtml5, FaNodeJs, FaBootstrap, FaPython } from "react-icons/fa";
+import { FaBriefcase, FaCertificate, FaExternalLinkAlt, FaEnvelope, FaReact, FaJsSquare, FaCss3Alt, FaHtml5, FaNodeJs, FaBootstrap, FaDownload, FaMapMarkerAlt, FaCalendarAlt, FaUserGraduate } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTensorflow, SiC, SiPython } from "react-icons/si";
 import "./Aboutcontent.css";
 import mohit_profile from "../assets/mohit_profile.jpg";
+import resumePdf from "../Documents/Mohit_resume (1).pdf";
 
+const certificates = [
+  { title: 'Generative AI Bootcamp', link: 'https://www.udemy.com/certificate/UC-1aabd0b4-014d-4f17-be00-30ad7630bbef/', issuer: 'Udemy', date: '2024' },
+  { title: 'SQL 2.0 Webinar', link: 'https://drive.google.com/file/d/1Ia1_KbgthLiVjXZRt9NZrt52YK0X0A8g/view', issuer: 'SkillEcted', date: '2024' },
+  { title: 'UI/UX Design with Figma', link: 'https://www.udemy.com/certificate/UC-4676d60c-70fa-4805-b4ca-520029bdbaef/', issuer: 'Udemy', date: '2023' },
+  { title: 'Javascript For Beginners', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-57241c7f-c02d-4eee-a008-5a4d34b724b9.pdf', issuer: 'Udemy', date: '2022' },
+  { title: 'Practical Web Development', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eec607b-3e3c-4921-8407-3910c9cc426a.pdf', issuer: 'Udemy', date: '2022' },
+  { title: 'Full Stack Web Development', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-46d9c497-870a-4c01-b6d0-358de77abf96.pdf', issuer: 'Udemy', date: '2023' },
+  { title: 'React js Tutorial', link: 'https://drive.google.com/file/d/1op2pYhuP2frgTJ10OC35ZsWXXbhEA-R4/view', issuer: 'Drive', date: '2023' },
+  { title: 'C++ Programming', link: 'https://drive.google.com/file/d/18xxWzdiRaW09grmf522w7D3ihz27jLQu/view', issuer: 'Drive', date: '2021' },
+];
+
+const experiences = [
+  {
+    title: 'Full Stack Web Development Intern',
+    company: 'NullClass',
+    date: 'Jun 2025 - Dec 2025',
+    desc: 'Contributed to product features, unit testing and cross-team QA efforts.',
+    link: 'https://drive.google.com/file/d/1ZncIiMFRnlZ-guZsQIYrlJOWcS4VyLxR/view?usp=drivesdk'
+  },
+  {
+    title: 'Frontend Intern',
+    company: 'BlueBricks',
+    date: 'Sept 2024 - Dec 2024',
+    desc: 'Worked on front-end features, performance and testing.',
+    link: 'https://onedrive.live.com/'
+  },
+  {
+    title: 'Software Development Engineer',
+    company: 'Bluestock',
+    date: 'Aug 2024 - Oct 2024',
+    desc: 'Implemented full-stack features and maintained REST APIs.',
+    link: 'https://photos.google.com/'
+  },
+  {
+    title: 'Frontend Intern',
+    company: 'Learntricks',
+    date: 'Jul 2024 - Aug 2024',
+    desc: 'Built interactive UI components and optimized rendering.',
+    link: 'https://drive.google.com/file/d/1LDRy77IeiFTTmTuJerlksFGsjOw8BH1E/view'
+  }
+];
+
+const skillItems = [
+  { name: "HTML", icon: <FaHtml5 />, color: "#f97316" },
+  { name: "CSS", icon: <FaCss3Alt />, color: "#60a5fa" },
+  { name: "JavaScript", icon: <FaJsSquare />, color: "#facc15" },
+  { name: "React", icon: <FaReact />, color: "#38bdf8" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "#34d399" },
+  { name: "Express", icon: <SiExpress />, color: "#94a3b8" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "#4ade80" },
+  { name: "ML/AI", icon: <SiTensorflow />, color: "#f97316" },
+  { name: "Python", icon: <SiPython />, color: "#facc15" },
+  { name: "C", icon: <SiC />, color: "#64748b" },
+  { name: "Bootstrap", icon: <FaBootstrap />, color: "#a78bfa" },
+];
 
 const Aboutcontent = () => {
-  const certificates = [
-    { title: 'Generative AI Bootcamp', link: 'https://www.udemy.com/certificate/UC-1aabd0b4-014d-4f17-be00-30ad7630bbef/', issuer: 'Udemy', date: '2024' },
-    { title: 'SQL 2.0 Webinar', link: 'https://drive.google.com/file/d/1Ia1_KbgthLiVjXZRt9NZrt52YK0X0A8g/view', issuer: 'SkillEcted', date: '2024' },
-    { title: 'UI/UX Design with Figma', link: 'https://www.udemy.com/certificate/UC-4676d60c-70fa-4805-b4ca-520029bdbaef/', issuer: 'Udemy', date: '2023' },
-    { title: 'Javascript For Beginners', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-57241c7f-c02d-4eee-a008-5a4d34b724b9.pdf', issuer: 'Udemy', date: '2022' },
-    { title: 'Practical Web Development', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-9eec607b-3e3c-4921-8407-3910c9cc426a.pdf', issuer: 'Udemy', date: '2022' },
-    { title: 'Full Stack Web Development', link: 'https://udemy-certificate.s3.amazonaws.com/pdf/UC-46d9c497-870a-4c01-b6d0-358de77abf96.pdf', issuer: 'Udemy', date: '2023' },
-    { title: 'React js Tutorial', link: 'https://drive.google.com/file/d/1op2pYhuP2frgTJ10OC35ZsWXXbhEA-R4/view', issuer: 'Drive', date: '2023' },
-    { title: 'C++ Programming', link: 'https://drive.google.com/file/d/18xxWzdiRaW09grmf522w7D3ihz27jLQu/view', issuer: 'Drive', date: '2021' }
-  ];
-
   return (
     <Box className="about" id="about" sx={{ width: "100%", marginTop: "3rem", padding: "1rem" }}>
+      {/* Profile + Skills Row */}
       <Grid container spacing={4} justifyContent="center" alignItems="center">
-        {/* Left Section - Profile Card */}
         <Grid item xs={12} md={5}>
-          <Box className="profile-card">
-            <div className="avatar">
-              {/* Circular avatar — using initials */}
-              <div className="initials"><img src={mohit_profile}  alt="" /></div>
-            </div>
-            <div className="profile-body">
-              <Typography variant="h4" className="profile-title"> Who Am I?</Typography>
-              <Typography variant="body1" className="profile-text">
-                I'm an AI & Data Science student (4th year) who loves front-end engineering. I build user-friendly,
-                responsive interfaces and enjoy solving problems with clean UI and performant code.
-              </Typography>
-              <Typography variant="body2" className="profile-text muted">
-                Internships: Bluebricks, Learnstriks, Bluestock — worked on UI components, performance improvements, and integration.
-              </Typography>
-              <div style={{ marginTop: 12 }}>
-                <Link to="/contact">
-                  <Button variant="contained" color="primary">Contact</Button>
-                </Link>
-                <a href="/src/Documents/MohitShankar Bhosale_InternshalaResume (2).pdf" target="_blank" rel="noreferrer" className="btn-link" style={{ marginLeft: 10 }}>
-                  <Button variant="outlined">Resume</Button>
-                </a>
-                <a href="mailto:msbhosale003@gmail.com" style={{ marginLeft: 10 }} aria-label="Email">
-                  <Button variant="text" startIcon={<FaEnvelope />}>Email</Button>
-                </a>
+          <div className="profile-card-modern">
+            <div className="profile-card-glow" />
+            <div className="profile-avatar-wrap">
+              <div className="profile-avatar-ring" />
+              <div className="profile-pic">
+                <img src={mohit_profile} alt="Mohit Bhosale" />
               </div>
+              <div className="profile-status-dot" />
             </div>
-          </Box>
-        </Grid>
-
-        {/* Right Section - visual/summary or badges */}
-        <Grid item xs={12} md={5}>
-          <Typography variant="h4" textAlign="center" className="section-title" alignItems={"center"}>Skills & Technologies</Typography>
-          <div className="skill-badges" style={{ marginTop: '16px' }}>
-
-            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer noopener" aria-label="HTML">
-              <div className="skill-icon html"><FaHtml5 /></div>
-              <div className="skill-name">HTML</div>
-            </a>
-
-            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer noopener" aria-label="CSS">
-              <div className="skill-icon css"><FaCss3Alt /></div>
-              <div className="skill-name">CSS</div>
-            </a>
-
-            <a className="skill icon-only" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer noopener" aria-label="JavaScript">
-              <div className="skill-icon js"><FaJsSquare /></div>
-              <div className="skill-name">JavaScript</div>
-            </a>
-
-            <a className="skill icon-only" href="https://reactjs.org" target="_blank" rel="noreferrer noopener" aria-label="React">
-              <div className="skill-icon react"><FaReact /></div>
-              <div className="skill-name">React</div>
-            </a>
-
-            <a className="skill icon-only" href="https://www.mongodb.com" target="_blank" rel="noreferrer noopener" aria-label="MongoDB">
-              <div className="skill-icon mongo"><SiMongodb /></div>
-              <div className="skill-name">MongoDB</div>
-            </a>
-
-            <a className="skill icon-only" href="https://expressjs.com" target="_blank" rel="noreferrer noopener" aria-label="Express">
-              <div className="skill-icon express"><SiExpress /></div>
-              <div className="skill-name">Express</div>
-            </a>
-
-            <a className="skill icon-only" href="https://nodejs.org" target="_blank" rel="noreferrer noopener" aria-label="Node.js">
-              <div className="skill-icon node"><FaNodeJs /></div>
-              <div className="skill-name">Node.js</div>
-            </a>
-
-            <a className="skill icon-only" href="https://www.tensorflow.org" target="_blank" rel="noreferrer noopener" aria-label="Machine Learning">
-              <div className="skill-icon ml"><SiTensorflow /></div>
-              <div className="skill-name">Machine Learning</div>
-            </a>
-
-            <a className="skill icon-only" href="https://www.python.org" target="_blank" rel="noreferrer noopener" aria-label="Python">
-              <div className="skill-icon python"><SiPython /></div>
-              <div className="skill-name">Python</div>
-            </a>
-
-            <a className="skill icon-only" href="https://en.cppreference.com/w/" target="_blank" rel="noreferrer noopener" aria-label="C">
-              <div className="skill-icon c"><SiC /></div>
-              <div className="skill-name">C</div>
-            </a>
-
-            <a className="skill icon-only" href="https://getbootstrap.com" target="_blank" rel="noreferrer noopener" aria-label="Bootstrap">
-              <div className="skill-icon bootstrap"><FaBootstrap /></div>
-              <div className="skill-name">Bootstrap</div>
-            </a>
+            <Typography variant="h4" className="profile-name">Mohit Bhosale</Typography>
+            <Typography className="profile-tagline">AI & Full Stack Developer</Typography>
+            <div className="profile-meta">
+              <span><FaMapMarkerAlt /> Thane, India</span>
+              <span><FaCalendarAlt /> B.E. AI&DS (2026)</span>
+            </div>
+            <div className="profile-stats">
+              <div><span className="profile-stat-num">3+</span><span>Years</span></div>
+              <div><span className="profile-stat-num">30+</span><span>Projects</span></div>
+              <div><span className="profile-stat-num">5+</span><span>Internships</span></div>
+            </div>
+            <div className="profile-actions">
+              <Link to="/contact">
+                <Button variant="contained" className="profile-btn-primary">Contact Me</Button>
+              </Link>
+              <a href={resumePdf} download>
+                <Button variant="outlined" className="profile-btn-outline"><FaDownload /> Resume</Button>
+              </a>
+            </div>
           </div>
         </Grid>
 
+        <Grid item xs={12} md={5}>
+          <div className="skills-modern">
+            <Typography variant="h5" className="skills-modern-title">Tech Stack</Typography>
+            <div className="skills-modern-grid">
+              {skillItems.map((s, i) => (
+                <a key={i} className="skill-modern-item" href="#" style={{ '--skill-color': s.color }}>
+                  <span className="skill-modern-icon" style={{ color: s.color }}>{s.icon}</span>
+                  <span className="skill-modern-name">{s.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </Grid>
       </Grid>
+
       {/* Experience & Certificates */}
       <Grid container spacing={4} justifyContent="center" sx={{ marginTop: 4 }}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h5" textAlign="center" className="section-title"><FaBriefcase className="icon-inline" /> Experience</Typography>
-          <div className="timeline">
-            {[
-              {
-                title: 'Full Stack Web Development Intern',
-                company: 'NullClass',
-                date: 'Jun 2025 - Dec 2025',
-                desc: 'Contributed to product features, unit testing and cross-team QA efforts.',
-                link: 'https://drive.google.com/file/d/1ZncIiMFRnlZ-guZsQIYrlJOWcS4VyLxR/view?usp=drivesdk'
-              },
-              {
-                title: 'Frontend Intern',
-                company: 'BlueBricks',
-                date: 'Sept 2024 - Dec 2024',
-                desc: 'Worked on front-end features, performance and testing.',
-                link: 'https://onedrive.live.com/'
-              },
-              {
-                title: 'Software Development Engineer',
-                company: 'Bluestock',
-                date: 'Aug 2024 - Oct 2024',
-                desc: 'Implemented full-stack features and maintained REST APIs.',
-                link: 'https://photos.google.com/'
-              },
-              {
-                title: 'Frontend Intern',
-                company: 'Learntricks',
-                date: 'Jul 2024 - Aug 2024',
-                desc: 'Built interactive UI components and optimized rendering.',
-                link: 'https://drive.google.com/file/d/1LDRy77IeiFTTmTuJerlksFGsjOw8BH1E/view'
-              }
-            ].map((e, idx) => (
-              <div key={`${e.title}-${idx}`} className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}>
-                <div className="timeline-marker" style={{ zIndex: 1 }}><FaBriefcase /></div>
-                <div className="timeline-content">
-                  <div className="timeline-head">
-                    <h4 className="timeline-title">{e.title} <span className="timeline-company">— {e.company}</span></h4>
-                    <span className="timeline-date">{e.date}</span>
-                  </div>
-                  <p className="timeline-desc">{e.desc} {e.link && <a href={e.link} target="_blank" rel="noreferrer" className="timeline-link"><FaExternalLinkAlt /></a>}</p>
+          <div className="section-header">
+            <FaBriefcase className="section-header-icon" />
+            <Typography variant="h5" className="section-header-title">Experience</Typography>
+          </div>
+          <div className="timeline-modern">
+            {experiences.map((e, idx) => (
+              <div className="timeline-modern-item" key={idx}>
+                <div className="timeline-modern-marker">
+                  <FaBriefcase />
+                </div>
+                <div className="timeline-modern-card">
+                  <span className="timeline-modern-date">{e.date}</span>
+                  <h4 className="timeline-modern-title">{e.title}</h4>
+                  <span className="timeline-modern-company">{e.company}</span>
+                  <p className="timeline-modern-desc">
+                    {e.desc}
+                    {e.link && <a href={e.link} target="_blank" rel="noreferrer" className="timeline-modern-link"><FaExternalLinkAlt /></a>}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </Grid>
 
-
-        {/* certificates */}
         <Grid item xs={12} md={6}>
-          <Typography variant="h5" className="section-title"><FaCertificate className="icon-inline" /> Certificates</Typography>
-          <div className="cert-grid" style={{marginTop: '16px'}}>
+          <div className="section-header">
+            <FaCertificate className="section-header-icon" />
+            <Typography variant="h5" className="section-header-title">Certificates</Typography>
+          </div>
+          <div className="certs-modern">
             {certificates.map((c, i) => (
-              <article className="cert-card modern" key={`${c.title}-${i}`} tabIndex="0">
-                <div className="cert-left">
-                  <div className="cert-badge"><FaCertificate /></div>
+              <a key={i} href={c.link} target="_blank" rel="noreferrer" className="cert-modern-item">
+                <div className="cert-modern-accent" />
+                <div className="cert-modern-badge">
+                  <FaCertificate />
                 </div>
-                <div className="cert-body">
-                  <div className="cert-title">{c.title}</div>
-                  <div className="cert-meta">{c.issuer} • <span className="cert-year">{c.date}</span></div>
+                <div className="cert-modern-body">
+                  <div className="cert-modern-title">{c.title}</div>
+                  <div className="cert-modern-meta">{c.issuer} &middot; {c.date}</div>
                 </div>
-                <div className="cert-actions">
-                  <a href={c.link} target="_blank" rel="noreferrer" aria-label={`Open ${c.title}`} className="cert-action-link">Open</a>
-                </div>
-                
-              </article>
+                <FaExternalLinkAlt className="cert-modern-open" />
+              </a>
             ))}
           </div>
         </Grid>

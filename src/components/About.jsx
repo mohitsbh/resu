@@ -1,227 +1,181 @@
-import React from "react";
-import { Typography, Container, Grid, Paper, Box, Divider } from "@mui/material";
+import { Typography, Container, Grid, Box } from "@mui/material";
+import { FaCode, FaGraduationCap, FaBriefcase, FaBrain, FaLayerGroup, FaTools, FaChartBar, FaHandshake } from "react-icons/fa";
 import "./About.css";
 
+const skills = [
+  { name: "React.js", level: 90, icon: "⚛️" },
+  { name: "JavaScript", level: 85, icon: "🟨" },
+  { name: "Node.js", level: 75, icon: "🟢" },
+  { name: "Python", level: 80, icon: "🐍" },
+  { name: "MongoDB", level: 70, icon: "🍃" },
+  { name: "Machine Learning", level: 72, icon: "🤖" },
+];
+
 const About = () => {
-    return (
-        <section className="about-section" id="about">
-            <Container maxWidth="lg">
-                <Typography variant="h2" className="section-title">
-                    About Me
-                </Typography>
-                <Divider className="section-divider" />
+  return (
+    <section className="about-section" id="about">
+      <div className="about-bg-glow" />
+      <Container maxWidth="lg">
+        <Typography variant="h2" className="section-title">
+          About Me
+        </Typography>
+        <div className="section-divider" />
 
-                <Grid container spacing={4} className="about-content">
-                    {/* Bio Section */}
-                    <Grid item xs={12} md={6}>
-                        <Paper elevation={3} className="about-card">
-                            <Typography variant="h5" className="card-title">
-                                Who I Am
-                            </Typography>
-                            <Typography variant="body1" className="bio-text">
-                                I'm a passionate AI & Data Science enthusiast and Software Developer with a strong foundation in web development.
-                                I enjoy solving complex problems and building innovative solutions that make a difference.
-                                My approach combines technical expertise with creative thinking to deliver high-quality results.
-                            </Typography>
-                            <Typography variant="body1" className="bio-text">
-                                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects,
-                                and continuously expanding my knowledge in the rapidly evolving tech landscape.
-                            </Typography>
-                        </Paper>
-                    </Grid>
+        <Grid container spacing={3} className="about-content">
+          {/* Bio + Quick Stats */}
+          <Grid item xs={12} md="auto">
+            <div className="about-bio-card">
+              <div className="about-bio-icon">
+                <FaCode />
+              </div>
+              <Typography variant="h5" className="about-bio-title">Who I Am</Typography>
+              <Typography variant="body1" className="about-bio-text">
+                I'm a passionate AI & Data Science enthusiast and Software Developer
+                who loves building intelligent solutions and seamless web experiences.
+              </Typography>
+              <Typography variant="body1" className="about-bio-text">
+                When I'm not coding, I explore new tech, contribute to open-source,
+                and push the boundaries of what I can create.
+              </Typography>
+              <Box className="about-bio-stats">
+                <div className="about-bio-stat">
+                  <span className="about-bio-stat-num">3+</span>
+                  <span className="about-bio-stat-lbl">Years Coding</span>
+                </div>
+                <div className="about-bio-stat">
+                  <span className="about-bio-stat-num">30+</span>
+                  <span className="about-bio-stat-lbl">Projects</span>
+                </div>
+                <div className="about-bio-stat">
+                  <span className="about-bio-stat-num">5+</span>
+                  <span className="about-bio-stat-lbl">Internships</span>
+                </div>
+              </Box>
+            </div>
+          </Grid>
 
-                    {/* Education Section */}
-                    <Grid item xs={12} md={6}>
-                        <Paper elevation={3} className="about-card">
-                            <Typography variant="h5" className="card-title">
-                                Education
-                            </Typography>
+          {/* Education */}
+          <Grid item xs={12} md>
+            <div className="about-card">
+              <Typography variant="h5" className="card-title">
+                <FaGraduationCap className="card-title-icon" /> Education
+              </Typography>
+              <div className="edu-item">
+                <div className="edu-dot" />
+                <div className="edu-body">
+                  <Typography variant="h6" className="edu-degree">BE in AI & Data Science</Typography>
+                  <span className="edu-school">Mumbai University</span>
+                  <span className="edu-year">2022 - 2026</span>
+                  <ul className="edu-detail">
+                    <li>CGPA: 7.0/10</li>
+                    <li>Coursework: DSA, ML, DBMS, Web Dev</li>
+                    <li>Final Year: Fake News Detection using Deep Learning</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="edu-item">
+                <div className="edu-dot" />
+                <div className="edu-body">
+                  <Typography variant="h6" className="edu-degree">Higher Secondary (Science)</Typography>
+                  <span className="edu-school">Maharashtra State Board</span>
+                  <span className="edu-year">2020 - 2022</span>
+                  <ul className="edu-detail">
+                    <li>Percentage: 60%</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="edu-item">
+                <div className="edu-dot" />
+                <div className="edu-body">
+                  <Typography variant="h6" className="edu-degree">Secondary Education</Typography>
+                  <span className="edu-school">Maharashtra State Board</span>
+                  <span className="edu-year">2019 - 2020</span>
+                  <ul className="edu-detail">
+                    <li>Percentage: 92%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Grid>
 
-                            <Box className="education-item">
-                                <Typography variant="h6">Bachelor of Engineering in Artificial Intelligence And Data Science</Typography>
-                                <Typography variant="subtitle1" className="institution">Mumbai University</Typography>
-                                <Typography variant="body2" className="duration">2022 - 2026</Typography>
-                                <Typography variant="body2" className="details">
-                                    • CGPA: 7.0/10
-                                    <br />
-                                    • Relevant Coursework: Data Structures, Algorithms, Database Management, Machine Learning, Web Development
-                                    <br />
-                                    • Final Year Project: Fake News Detection using Deep Learning
-                                </Typography>
-                            </Box>
+          {/* Experience */}
+          <Grid item xs={12}>
+            <div className="about-card">
+              <Typography variant="h5" className="card-title">
+                <FaBriefcase className="card-title-icon" /> Professional Experience
+              </Typography>
+              <Grid container spacing={2}>
+                {[
+                  { role: "FullStack Dev Intern", company: "NullClass Tech.", period: "Jun 2025 - Present", details: ["React.js & Node.js development", "UI/UX improvements", "Code reviews", "MongoDB optimization"] },
+                  { role: "Frontend Dev Intern", company: "BlueBricks", period: "Jun 2024 - Aug 2024", details: ["React & MUI components", "Pixel-perfect UI", "REST API integration", "30% load time improvement"] },
+                  { role: "SDE Intern", company: "Bluestock", period: "Jun 2024 - Aug 2024", details: ["Node.js & Express.js backend", "MongoDB schema design", "RESTful APIs", "Security best practices"] },
+                  { role: "Frontend Intern", company: "BlueBricks", period: "Jun 2023 - Aug 2023", details: ["HTML/CSS/JS components", "Real estate website", "Form validation", "Brand identity"] },
+                ].map((exp, i) => (
+                  <Grid item xs={12} sm={6} key={i}>
+                    <div className="exp-item">
+                      <span className="exp-period">{exp.period}</span>
+                      <Typography variant="h6" className="exp-role">{exp.role}</Typography>
+                      <span className="exp-company">{exp.company}</span>
+                      <ul className="exp-details">
+                        {exp.details.map((d, j) => <li key={j}>{d}</li>)}
+                      </ul>
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
+            </div>
+          </Grid>
 
-                            <Divider className="item-divider" />
-
-                            <Box className="education-item">
-                                <Typography variant="h6">Higher Secondary Education</Typography>
-                                <Typography variant="subtitle1" className="institution">Maharashtra State Board</Typography>
-                                <Typography variant="body2" className="duration">2020 - 2022</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Percentage: 60%
-                                    <br />
-                                    • Science Stream
-                                </Typography>
-
-                            </Box>
-                            <Divider className="item-divider" />
-                            <Box className="education-item">
-                                <Typography variant="h6">Secondary Education</Typography>
-                                <Typography variant="subtitle1" className="institution">Maharashtra State Board</Typography>
-                                <Typography variant="body2" className="duration">2019 - 2020</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Percentage: 92%
-                                    <br />
-
-                                </Typography>
-                            </Box>
-                        </Paper>
-                    </Grid>
-
-                    {/* Experience Section */}
-                    <Grid item xs={12}>
-                        <Paper elevation={3} className="about-card">
-                            <Typography variant="h5" className="card-title">
-                                Professional Experience
-                            </Typography>
-
-                            <Box className="experience-item">
-                                <Typography variant="h6">FullStack Development Intern</Typography>
-                                <Typography variant="subtitle1" className="company">NullClass Tech.</Typography>
-                                <Typography variant="body2" className="duration">June 2025 - Present</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Developed and maintained responsive web applications using React.js and Node.js
-                                    <br />
-                                    • Collaborated with the design team to implement UI/UX improvements
-                                    <br />
-                                    • Participated in code reviews and implemented feedback to improve code quality
-                                    <br />
-                                    • Assisted in database design and optimization using MongoDB
-                                </Typography>
-                            </Box>
-
-                            <Divider className="item-divider" />
-
-                            <Box className="experience-item">
-                                <Typography variant="h6">Frontend Development Intern</Typography>
-                                <Typography variant="subtitle1" className="company">BlueBricks</Typography>
-                                <Typography variant="body2" className="duration">june 2024 - August 2024</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Developed responsive frontend components using React.js and Material UI
-                                    <br />
-                                    • Implemented pixel-perfect UI designs and ensured cross-browser compatibility
-                                    <br />
-                                    • Collaborated with backend developers to integrate RESTful APIs
-                                    <br />
-                                    • Optimized website performance and improved loading times by 30%
-                                </Typography>
-                            </Box>
-
-
-                            <Divider className="item-divider" />
-
-                            <Box className="experience-item">
-                                <Typography variant="h6">Software Developer Engineer Intern</Typography>
-                                <Typography variant="subtitle1" className="company">Bluestock</Typography>
-                                <Typography variant="body2" className="duration">june 2024 - August 2024</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Contributed to backend development using Node.js and Express.js
-                                    <br />
-                                    • Designed and implemented database schemas using MongoDB
-                                    <br />
-                                    • Created RESTful APIs for financial data processing and analysis
-                                    <br />
-                                    • Participated in code reviews and implemented best practices for security
-                                </Typography>
-                            </Box>
-
-                            <Divider className="item-divider" />
-
-                            <Box className="experience-item">
-                                <Typography variant="h6">Frontend Developer Intern</Typography>
-                                <Typography variant="subtitle1" className="company">BlueBricks</Typography>
-                                <Typography variant="body2" className="duration">june 2023 - August 2023</Typography>
-                                <Typography variant="body2" className="details">
-                                    • Built interactive UI components using HTML, CSS, and JavaScript
-                                    <br />
-                                    • Assisted in developing a responsive website for real estate listings
-                                    <br />
-                                    • Implemented form validation and user authentication features
-                                    <br />
-                                    • Collaborated with designers to ensure consistent brand identity
-                                </Typography>
-                            </Box>
-
-                        </Paper>
-                    </Grid>
-
-                    {/* Skills Section */}
-                    <Grid item xs={12}>
-                        <Paper elevation={3} className="about-card">
-                            <Typography variant="h5" className="card-title">
-                                Skills & Expertise
-                            </Typography>
-
-                            <Grid container spacing={2} className="skills-container">
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Programming Languages</Typography>
-                                        <Typography variant="body2">
-                                            JavaScript, Python, Java, C++, HTML/CSS
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Frameworks & Libraries</Typography>
-                                        <Typography variant="body2">
-                                            React.js, Node.js, Express.js, Django, TensorFlow, PyTorch
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Tools & Technologies</Typography>
-                                        <Typography variant="body2">
-                                            Git, MongoDB, MySQL, Firebase
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Data Science</Typography>
-                                        <Typography variant="body2">
-                                            Machine Learning, Data Analysis, Data Visualization, NLP
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Web Development</Typography>
-                                        <Typography variant="body2">
-                                            Responsive Design, RESTful APIs, UI/UX
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6} md={4}>
-                                    <Paper className="skill-category">
-                                        <Typography variant="h6">Soft Skills</Typography>
-                                        <Typography variant="body2">
-                                            Problem Solving, Team Collaboration, Communication, Time Management
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                    </Grid>
+          {/* Skills with Progress Bars */}
+          <Grid item xs={12}>
+            <div className="about-card">
+              <Typography variant="h5" className="card-title">
+                <FaBrain className="card-title-icon" /> Skills & Proficiency
+              </Typography>
+              <Grid container spacing={3}>
+                <Grid item xs={12} md={7}>
+                  <div className="skills-progress">
+                    {skills.map((s, i) => (
+                      <div className="skill-progress-item" key={i}>
+                        <div className="skill-progress-header">
+                          <span className="skill-progress-icon">{s.icon}</span>
+                          <span className="skill-progress-name">{s.name}</span>
+                          <span className="skill-progress-pct">{s.level}%</span>
+                        </div>
+                        <div className="skill-progress-track">
+                          <div className="skill-progress-bar" style={{ width: `${s.level}%` }}>
+                            <div className="skill-progress-shine" />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </Grid>
-            </Container>
-        </section>
-    );
+                <Grid item xs={12} md={5}>
+                  <div className="skills-categories">
+                    {[
+                      { icon: <FaLayerGroup />, title: "Languages", items: "JavaScript, Python, Java, C++, HTML/CSS" },
+                      { icon: <FaTools />, title: "Frameworks", items: "React, Node.js, Express, Django, TensorFlow" },
+                      { icon: <FaChartBar />, title: "Data Science", items: "ML, Data Analysis, NLP, Visualization" },
+                      { icon: <FaHandshake />, title: "Soft Skills", items: "Problem Solving, Teamwork, Communication" },
+                    ].map((cat, i) => (
+                      <div className="skills-cat-item" key={i}>
+                        <span className="skills-cat-icon">{cat.icon}</span>
+                        <div>
+                          <div className="skills-cat-title">{cat.title}</div>
+                          <div className="skills-cat-items">{cat.items}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+    </section>
+  );
 };
 
 export default About;

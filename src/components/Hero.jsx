@@ -1,52 +1,55 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Typography, Box } from "@mui/material";
-import "./Hero.css"; // Import the updated CSS file
+import { Typography, Box } from "@mui/material";
+import { FaArrowRight, FaDownload } from "react-icons/fa";
+import resumePdf from "../Documents/Mohit_resume (1).pdf";
+import "./Hero.css";
 
 const Hero = () => {
   return (
     <div className="hero">
-      {/* Overlay */}
-      <div className="mask"></div>
+      <div className="hero-bg-orb hero-bg-orb-1"></div>
+      <div className="hero-bg-orb hero-bg-orb-2"></div>
+      <div className="hero-bg-orb hero-bg-orb-3"></div>
+      <div className="hero-grid"></div>
 
-      {/* Content */}
-      <div className="content">
-        <Typography variant="h4" className="hero-title over-image">
-          Hi, I'm <span className="highlight">Mohit Bhosale</span> 👋
-        </Typography>
-        <Typography variant="h5" className="hero-subtitle over-image">
-          🚀 AI & Data Science Enthusiast | Software & Web Developer
-        </Typography>
-        <Typography className="hero-description">
-          Passionate about building intelligent solutions, crafting seamless web
-          experiences, and solving real-world problems through technology.
+      <div className="hero-content">
+        <div className="hero-badge">AI & Full Stack Developer</div>
+
+        <Typography variant="h1" className="hero-title">
+          Hi, I'm{" "}
+          <span className="hero-title-gradient">Mohit Bhosale</span>
         </Typography>
 
-        {/* Professional highlights */}
-        <Box className="highlights-container">
-          <div className="highlight-item">
-            <span className="highlight-number">3+</span>
-            <span className="highlight-text">Years of Coding Experience</span>
+        <Typography className="hero-subtitle">
+          Crafting intelligent digital experiences at the intersection of
+          AI, data, and modern web technologies.
+        </Typography>
+
+        <Box className="hero-stats">
+          <div className="hero-stat">
+            <span className="hero-stat-number">3+</span>
+            <span className="hero-stat-label">Years Coding</span>
           </div>
-          <div className="highlight-item">
-            <span className="highlight-number">30+</span>
-            <span className="highlight-text">Projects Completed</span>
+          <div className="hero-stat-divider"></div>
+          <div className="hero-stat">
+            <span className="hero-stat-number">30+</span>
+            <span className="hero-stat-label">Projects</span>
           </div>
-          <div className="highlight-item">
-            <span className="highlight-number">5+</span>
-            <span className="highlight-text">Technologies Mastered</span>
+          <div className="hero-stat-divider"></div>
+          <div className="hero-stat">
+            <span className="hero-stat-number">5+</span>
+            <span className="hero-stat-label">Tech Stacks</span>
           </div>
         </Box>
 
-        {/* Buttons */}
-        <div className="buttons">
-          <Link to="/projects" className="btn">
-            View Projects
+        <Box className="hero-actions">
+          <Link to="/projects" className="hero-btn hero-btn-primary">
+            View Projects <FaArrowRight className="hero-btn-icon" />
           </Link>
-          <Link to="/contact" className="btn btn-light">
-            Contact Me
-          </Link>
-        </div>
+          <a href={resumePdf} download className="hero-btn hero-btn-secondary">
+            <FaDownload className="hero-btn-icon" /> Resume
+          </a>
+        </Box>
       </div>
     </div>
   );

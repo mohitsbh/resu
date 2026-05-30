@@ -1,4 +1,3 @@
-import React from "react";
 import resumeImage from "../assets/resume.jpg";
 import resumePdf from "../Documents/Mohit_resume (1).pdf";
 import "./Resume.css";
@@ -9,11 +8,7 @@ const Resume = () => {
     <div className="Resume">
       <Navbar />
       <h1>My Resume</h1>
-
-      {/* Image Resume */}
       <img src={resumeImage} alt="Resume" className="resume-image" />
-
-      {/* PDF Resume (Optional) */}
       <div className="resume-pdf">
         <h2>Or view my resume in PDF format:</h2>
         <div className="pdf-controls">

@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, Button, Typography, Box } from "@mui/material";
+import { TextField, Button, Typography } from "@mui/material";
 import "./Form.css";
 
 const Form = () => {
@@ -29,40 +29,14 @@ const Form = () => {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        padding: "4rem 1rem",
-        color:'white',
-        // backgroundColor: "#000", // White background for the form
-      }}
-      
-    >
-      <form
-        onSubmit={onSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          maxWidth: "600px",
-          backgroundColor: "#fff", // White background for the form
-          padding: "2rem",
-          borderRadius: "8px", // Adds rounded corners to the form
-          boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Subtle shadow for a nice effect
-        }}
-      >
+    <div className="form-wrapper">
+      <form onSubmit={onSubmit} className="contact-form-modern">
         <TextField
           label="Your Name"
           name="name"
           variant="outlined"
           required
-          sx={{
-            marginBottom: "1rem",
-            backgroundColor: "#fff", // White background for input
-            borderColor: "#ccc", // Light border for input
-            color: "#000", // Dark text color for better readability
-          }}
+          className="form-field"
         />
         <TextField
           label="Email"
@@ -70,24 +44,14 @@ const Form = () => {
           type="email"
           variant="outlined"
           required
-          sx={{
-            marginBottom: "1rem",
-            backgroundColor: "#fff", // White background for input
-            borderColor: "#ccc", // Light border for input
-            color: "#000", // Dark text color for better readability
-          }}
+          className="form-field"
         />
         <TextField
           label="Subject"
           name="subject"
           variant="outlined"
           required
-          sx={{
-            marginBottom: "1rem",
-            backgroundColor: "#fff", // White background for input
-            borderColor: "#ccc", // Light border for input
-            color: "#000", // Dark text color for better readability
-          }}
+          className="form-field"
         />
         <TextField
           label="Message"
@@ -97,33 +61,22 @@ const Form = () => {
           rows={6}
           placeholder="Type Your Message Here"
           required
-          sx={{
-            marginBottom: "1rem",
-            backgroundColor: "#fff", // White background for input
-            borderColor: "#ccc", // Light border for input
-            color: "#000", // Dark text color for better readability
-          }}
+          className="form-field"
         />
         <Button
           type="submit"
           variant="contained"
-          color="primary"
-          sx={{
-            padding: "10px 18px",
-            marginBottom: "1rem",
-            backgroundColor: "#f39c12", // Vibrant button color
-            '&:hover': {
-              backgroundColor: "#e67e22", // Darker shade on hover
-            },
-          }}
+          className="form-submit-btn"
         >
           Submit
         </Button>
-        <Typography variant="body1" color="textSecondary">
-          {result}
-        </Typography>
+        {result && (
+          <Typography variant="body1" className="form-status">
+            {result}
+          </Typography>
+        )}
       </form>
-    </Box>
+    </div>
   );
 };
 

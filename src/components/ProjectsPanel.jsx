@@ -25,18 +25,21 @@ const ProjectsPanel = () => {
             return (
                 p.title.toLowerCase().includes(q) ||
                 p.info.toLowerCase().includes(q) ||
-                (p.category || "").toLowerCase().includes(q)
+                (p.category || "").toLowerCase().includes(q) ||
+                (p.tech || []).some((t) => t.toLowerCase().includes(q))
             );
         });
 
-        if (internshipsFirst) {
-            list = list.sort((a, b) => {
-                const ia = (a.category || "").toLowerCase() === "internship" ? 0 : 1;
-                const ib = (b.category || "").toLowerCase() === "internship" ? 0 : 1;
-                if (ia !== ib) return ia - ib;
-                return (b.id || 0) - (a.id || 0);
-            });
-        }
+        list = list.sort((a, b) => {
+            const pa = a.priority || 999;
+            const pb = b.priority || 999;
+            if (internshipsFirst) {
+                const ia = (a.category || "").toLowerCase() === "internship" ? -1 : 0;
+                const ib = (b.category || "").toLowerCase() === "internship" ? -1 : 0;
+                if (ia !== ib) return ib - ia;
+            }
+            return pa - pb;
+        });
 
         return list;
     }, [query, activeCategory, internshipsFirst]);
@@ -44,13 +47,15 @@ const ProjectsPanel = () => {
     return (
         <section className="projects-panel">
             <div className="projects-controls">
-                <input
-                    aria-label="Search projects"
-                    className="projects-search"
-                    placeholder="Search projects by title, description or category"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                />
+                <div className="search-wrap">
+                    <input
+                        aria-label="Search projects"
+                        className="projects-search"
+                        placeholder="Search by title, tech or category"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+                </div>
 
                 <div className="projects-actions">
                     <div className="chips" role="tablist" aria-label="Filter by category">

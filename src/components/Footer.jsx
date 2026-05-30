@@ -1,6 +1,6 @@
 import { Grid, Box, Typography, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaPhone, FaHome, FaMailBulk, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaArrowUp } from "react-icons/fa";
+import { FaPhone, FaHome, FaMailBulk, FaFacebook, FaLinkedin, FaInstagram, FaGithub, FaRobot, FaArrowUp } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -68,6 +68,9 @@ const Footer = () => {
             </IconButton>
             <IconButton href="https://github.com/mohitsbh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-btn">
               <FaGithub />
+            </IconButton>
+            <IconButton href="https://huggingface.co/msbhosale003" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace" className="social-btn">
+              <FaRobot />
             </IconButton>
           </Box>
         </Grid>

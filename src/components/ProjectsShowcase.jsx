@@ -5,8 +5,8 @@ import Wordcarddata from "./Wordcarddata";
 import "./ProjectsShowcase.css";
 
 const ProjectsShowcase = () => {
-  // Get only the first 6 projects to showcase
-  const featuredProjects = Wordcarddata.slice(0, 6);
+  const sorted = [...Wordcarddata].sort((a, b) => (a.priority || 999) - (b.priority || 999));
+  const featuredProjects = sorted.slice(0, 6);
 
   return (
     <section className="projects-showcase" id="projects">
@@ -15,7 +15,7 @@ const ProjectsShowcase = () => {
           Featured Projects
         </Typography>
         <Divider className="section-divider" />
-        
+
         <Typography variant="body1" className="section-description">
           Here are some of my recent projects that showcase my skills and expertise. Each project represents a unique challenge and solution. <br />
         </Typography>
@@ -38,26 +38,33 @@ const ProjectsShowcase = () => {
                   <Box className="project-category">
                     <span className="category-tag">{project.category}</span>
                   </Box>
+                  {project.tech && (
+                    <Box className="pro-tech-showcase">
+                      {project.tech.slice(0, 3).map((t, i) => (
+                        <span key={i} className="pro-tech-tag">{t}</span>
+                      ))}
+                    </Box>
+                  )}
                   <Typography variant="body2" color="text.secondary" className="project-description">
                     {project.info}
                   </Typography>
                 </CardContent>
                 <CardActions className="project-actions">
-                  <Button 
-                    size="small" 
-                    component="a" 
-                    href={project.viewLink} 
-                    target="_blank" 
+                  <Button
+                    size="small"
+                    component="a"
+                    href={project.viewLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="view-btn"
                   >
                     View Live
                   </Button>
-                  <Button 
-                    size="small" 
-                    component="a" 
-                    href={project.sourceLink} 
-                    target="_blank" 
+                  <Button
+                    size="small"
+                    component="a"
+                    href={project.sourceLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="source-btn"
                   >
@@ -70,10 +77,10 @@ const ProjectsShowcase = () => {
         </Grid>
 
         <Box className="view-all-container">
-          <Button 
-            component={Link} 
-            to="/projects" 
-            variant="contained" 
+          <Button
+            component={Link}
+            to="/projects"
+            variant="contained"
             className="view-all-btn"
           >
             View All Projects

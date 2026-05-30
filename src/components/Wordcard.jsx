@@ -20,6 +20,20 @@ const Wordcard = ({ projects }) => {
             <div className="project-card-body">
               <h2 className="pro-title">{project.title}</h2>
               <p className="pro-info">{project.info}</p>
+              {project.tech && (
+                <div className="pro-tech">
+                  {project.tech.map((t, i) => (
+                    <span key={i} className="pro-tech-badge">{t}</span>
+                  ))}
+                </div>
+              )}
+              {project.highlights && (
+                <div className="pro-highlights">
+                  {project.highlights.map((h, i) => (
+                    <span key={i} className="pro-highlight-tag">{h}</span>
+                  ))}
+                </div>
+              )}
               <div className="pro-meta">
                 <span className="pro-category" data-cat={project.category}>{project.category}</span>
               </div>

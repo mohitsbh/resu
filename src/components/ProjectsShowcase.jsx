@@ -60,16 +60,18 @@ const ProjectsShowcase = () => {
                   >
                     View Live
                   </Button>
-                  <Button
-                    size="small"
-                    component="a"
-                    href={project.sourceLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="source-btn"
-                  >
-                    Source Code
-                  </Button>
+                  {project.sourceLink && (
+                    <Button
+                      size="small"
+                      component="a"
+                      href={project.sourceLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="source-btn"
+                    >
+                      Source Code
+                    </Button>
+                  )}
                 </CardActions>
               </Card>
             </Grid>

@@ -1,5 +1,4 @@
 import "./wordcard.css";
-import { NavLink } from "react-router-dom";
 import Wordcarddata from "./Wordcarddata";
 import ScrollReveal from "./ScrollReveal";
 
@@ -38,12 +37,10 @@ const Wordcard = ({ projects }) => {
                 <span className="pro-category" data-cat={project.category}>{project.category}</span>
               </div>
               <div className="pro-buttons">
-                <NavLink to={project.viewLink} className="btn" target="_blank">
-                  View
-                </NavLink>
-                <NavLink to={project.sourceLink} className="btn btn-outline" target="_blank">
-                  Source
-                </NavLink>
+                <a href={project.viewLink} className="btn" target="_blank" rel="noopener noreferrer">View</a>
+                {project.sourceLink && (
+                  <a href={project.sourceLink} className="btn btn-outline" target="_blank" rel="noopener noreferrer">Source</a>
+                )}
               </div>
             </div>
           </div>
